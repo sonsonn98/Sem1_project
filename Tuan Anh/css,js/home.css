@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.06rem;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.discover-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.discover-container h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.discover {
+  justify-content: center;
+}
+
+.discover-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.discover-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+.discover-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.discover-link {
+  text-decoration: underline;
+  color: black;
+  font-size: 12px;
+}
+
+/* aboutus */
+.section-aboutus {
+  margin-top: 140px;
+}
+
+.aboutus-container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  padding: 0 20px;
+}
+
+.aboutus-img {
+  position: absolute;
+  right: 30px;
+  top: -107px;
+  z-index: -1;
+}
+
+.label {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  font-size: 10px;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+  -webkit-transform: matrix(0, -1, 1, 0, 0, 0);
+}
+
+.aboutus-item {
+  padding: 70px 55px 36px 41px;
+  background: #fff;
+  max-width: 460px;
+  width: 100%;
+  margin-left: 200px;
+}
+
+.aboutus-subtitle {
+  font-size: 31.25px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.aboutus-text {
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.aboutus-link {
+  margin-top: 70px;
+  display: flex;
+  max-width: fit-content;
+  margin-left: auto;
+  line-height: 1.2;
+  color: black;
+  text-underline-offset: 8px;
+}
+
+/* advertise */
+.advertise-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.advertise {
+  justify-content: space-between;
+}

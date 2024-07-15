@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* .contact-body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
+} */
+
+.social-network {
+    margin-bottom: 20px;
+}
+
+.social-network-title {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-network-list {
+    padding-left: 0;
+}
+
+.social-network-item {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-network-item img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-network-item:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .contact-label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact-form .contact-input {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact-form .contact-input:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+.contact-note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form .contact-btn {
+    background-color: #fff;
+    border: 1px solid #d8d6d6;
+    border-radius: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #070707;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form .contact-btn:hover {
+    background-color: #ebe7e7;
+    color: #fff;
+}
+
+.map {
+    margin-bottom: 20px;
+}
+
+.map-title {
+    margin-bottom: 10px;
+}
+
+.contact-info-title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+.contact-information p {
+    margin-bottom: 20px;
+}
+
+.contact-background {
+    background-color: rgb(236, 231, 231);
+    padding: 10px;
+}

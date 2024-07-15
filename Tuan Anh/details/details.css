@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.details-body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.10rem;
+}
+
+.details-padding {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.details-img {
+    width: 100%;
+    height: 100%;
+}
+
+.details-container-img {
+    position: relative;
+    height: 450px;
+}
+
+.details-big-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.details-main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* beach header */
+.details-beach-container {
+    position: absolute;
+    margin-top: -135px;
+    
+}
+
+.details-beach-header {
+    margin: 0 auto;
+    width: 500px;
+    height: 270px;
+    text-align: center;
+    background-color: #fff;
+    padding: 60px;
+}
+
+.header-p {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.details-header-title {
+    font-size: 40px;
+}
+
+.details-header-subtitle {
+    margin: 10px 0;
+}
+
+/* beach body */
+.details-beach-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-beach-about {
+    width: 40%;
+    height: auto;
+}
+
+.details-beach-tilte {
+    font-weight: bolder;
+}
+
+.details-beach-text {
+    opacity: 80%;
+}
+
+.details-beach-img {
+    width: 55%;
+    height: auto;
+}
+
+/* pluses */
+.details-pluses {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: 40px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-pluses-item {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-pluses-img {
+    width: 120px;
+    height: 120px;
+}
+
+.details-pluses-info {
+    width: 65%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-pluses-title {
+    margin: 0;
+    width: 100%;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.details-pluses-text {
+    margin-top: auto;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #000;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.details-images {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.details-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-images-item {
+    width: 33.33%;
+    height: auto;
+}
+
+.details-hotel {
+    width: 100%;
+}
+
+.details-hotel-container {
+    width: 100%;
+    padding: 0 150px;
+    gap: 10px;
+}
+
+.details-hotel-title {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-quote-later span {
+    position: absolute;
+    /* content: 'M'; */
+    font-size: 180px;
+    left: 180px;
+    margin-top: -95px;
+    z-index: -1;
+    color: rgb(226, 223, 223);
+    line-height: 1.2;
+}
+
+.details-hotel-title p:last-child {
+    text-align: right;
+}
+
+.details-quote-later p {
+    padding-right: 200px;
+    color: #000;
+}
+
+.details-img-bg {
+    width: 100%;
+    height: 900px;
+    padding: 150px 0;
+}
+
+
+.details-container-more {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.details-more-item {
+    width: 48%;
+    height: auto; 
+}
+
+.details-more {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-more-item .details-more-title {
+    font-size: 12.5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 100%;
+    height: 70px;
+    background-color: #faf9f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-more-table {
+    padding: 20px 0;
+    width: 80%;
+    height: 350px;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.details-more-table thead tr td {
+    font-size: 12.5px;
+    width: 25%;
+    text-align: center;
+}
+
+.details-more-table tbody {
+    margin-top: 10px;
+}
+
+.details-more-table tbody tr td {
+    font-size: 11px;
+    width: 25%;
+    text-align: center;
+}
+
+.details-table-month {
+    text-align: left;
+}
+
+/* more right */
+.more-item-right {
+    padding: 10px;
+    background-color: #faf9f7;
+}
+
+.details-right-info {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.details-more-title-right {
+    width: 100%;
+    font-size: 12.5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.details-list-info {
+    padding: 0 25px;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.details-list-info li {
+    margin-top: 20px;
+}

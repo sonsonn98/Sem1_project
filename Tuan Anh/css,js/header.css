@@ -1,0 +1,145 @@
+.header-wrapper {
+  background: url(/image/hero_bg.jpg) center / cover;
+  min-height: 100dvh;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 20;
+}
+
+.header {
+  max-width: 1000px;
+  width: 100%;
+  z-index: 20;
+}
+
+.header-text {
+  text-transform: uppercase;
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  p {
+    display: block;
+    font-weight: 400;
+    font-size: 40px;
+    animation: fadeInLeft 0.6s ease-in;
+    font-family: "Playwrite CU", cursive;
+  }
+  img {
+    animation: fadeInRight 0.6s ease-in;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInTop 0.6s ease-in;
+}
+
+.menu .dropdown {
+  position: relative;
+}
+
+.dropdown:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateX(0);
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-link {
+  font-size: 12.5px;
+  line-height: 1.2;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-underline-offset: 4px;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.submenu {
+  min-width: 170px;
+  position: absolute;
+  left: -8px;
+  z-index: 5;
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
+  transition: 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  background: none;
+  top: 100%;
+  padding-top: 18px;
+  ul {
+    list-style: none;
+    margin-left: 10px;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  li {
+    position: relative;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -80%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

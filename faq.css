@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: url('https://img.thuthuatphanmem.vn/uploads/2018/10/03/hinh-anh-khu-du-lich-bien-dep_111549844.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.breadcrumbs {
+    color: white;
+    font-size: 16px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.categories,
+.faq {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.categories {
+    width: 20%;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.categories h2 {
+    font-size: 24px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories ul li {
+    padding: 10px 0;
+}
+
+.faq {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.faq h2 {
+    font-size: 24px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.question {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.question h3 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.question::before {
+    content: '+';
+    font-size: 24px;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-right: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.question.active::before {
+    content: '-';
+    color: blue;
+    border-color: blue;
+    background-color: #e0f7fa;
+}
+
+.answer {
+    display: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.answer.show {
+    display: block;
+}

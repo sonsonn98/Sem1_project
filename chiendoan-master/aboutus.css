@@ -1,0 +1,112 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.section__about-hero {
+    background: url('https://demoda.vn/wp-content/uploads/2022/02/hinh-nen-song-bien-1.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.about-hero {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-hero h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.about-hero p {
+    color: white;
+    font-size: 16px;
+}
+
+.section__story {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.story__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.story__text {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.mission__image-left,
+.mission__image-right {
+    width: 35%;
+}
+
+.mission__info {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.mission__subtitle {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.mission__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.terms__list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.terms__link {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-section p {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
