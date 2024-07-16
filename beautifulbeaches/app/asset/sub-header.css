@@ -1,7 +1,7 @@
 
 .sub-header {
   width: 100%;
-  position: relative;
+  position: fixed;
   left: 0;
   top: 0px;
   display: flex;

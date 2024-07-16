@@ -2,7 +2,7 @@
 <html lang="en">
 <body>
 <div class="header-wrapper">
-      <header>
+      <header id="scrollHeader">
         <nav class="header">
           <ul class="menu">
             <li class="menu-item dropdown">

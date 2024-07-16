@@ -8,7 +8,7 @@ class ContactusController extends BaseController {
     }
     // action
     public function index(){
-        $this->view("layout", ["content" => "contactus"]);
+        $this->view("layout3", ["content" => "contactus"]);
     }
 
 

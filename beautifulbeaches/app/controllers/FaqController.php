@@ -8,7 +8,7 @@ class FaqController extends BaseController {
     }
     // action
     public function index(){
-        $this->view("layout2", ["content" => "faq"]);
+        $this->view("layout3", ["content" => "faq"]);
     }
 
 

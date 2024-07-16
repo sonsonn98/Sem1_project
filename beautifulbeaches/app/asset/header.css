@@ -1,5 +1,6 @@
 .header-wrapper {
-  background: url(http://localhost/beautifulbeaches/app/asset/image/hero_bg.jpg) center / cover;
+  background: url(http://localhost/beautifulbeaches/app/asset/image/hero_bg.jpg)
+    center / cover;
   min-height: 100dvh;
   position: relative;
   height: 100%;
@@ -8,14 +9,38 @@
 
 header {
   width: 100%;
-  position: relative;
+  position: fixed;
   left: 0;
   top: 40px;
-  display: flex !important;
+  display: flex ;
   justify-content: center;
   align-items: center;
   padding: 10px;
   z-index: 20;
+}
+
+#scrollHeader.scrolled {
+  max-width: 100%;
+  width: 100%;
+  height: 80px;
+  color: black !important;
+  background-color: rgba(252, 245, 239, 0.7);
+  padding: 10px;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  .header .menu .menu-item .menu-link {
+    color: black;
+  }
+  .header .menu .menu-item .submenu {
+   
+    .submenu-list {
+      background-color: rgba(252, 245, 239, 0.6);
+      width: 70px;
+    }
+  }
+  
 }
 
 .header {
@@ -30,7 +55,7 @@ header {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   p {
     display: block;
