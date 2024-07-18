@@ -6,7 +6,7 @@
         <!-- big img beach -->
         <img class=" details-big-img" src="https://worlds50beaches.com/assets/images/beaches-2024/041.webp" alt="">
 
-<header class="sub-header">
+<!-- <header class="sub-header">
       <nav class="header">
         <ul class="menu">
           <li class="menu-item dropdown">
@@ -41,7 +41,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     </div>
 
 

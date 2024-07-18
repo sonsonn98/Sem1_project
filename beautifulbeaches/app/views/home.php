@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>  
+
+  <div class="c-12 home-container-img">
+        <!-- big img beach -->
+        <img class=" details-big-img" src="/beautifulbeaches/app/asset/image/hero_bg.jpg" alt="">
+
+    </div>
     <main>
+    <div class="header-text">
+        <p>BEAUTY OF BEACHES</p>
+        <img src="/beautifulbeaches/app/asset/image/transparentlogo.png" alt="" />
+      </div>
+
       <section class="section-discover">
         <div class="discover-container">
           <h2>DISCOVER BEST BEACHES ON EARTH</h2>

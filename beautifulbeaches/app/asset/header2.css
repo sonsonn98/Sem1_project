@@ -7,6 +7,7 @@
   width: 100%;
 } */
 
+
 header {
   width: 100%;
   position: fixed;
@@ -17,7 +18,9 @@ header {
   align-items: center;
   padding: 10px;
   z-index: 20;
-  min-height: 81px;
+  background-color: white;
+  border-bottom: 1px solid #d6d6d6;
+  animation: fadeInTop 0.6s ease-in;
 }
 
 #scrollHeader.scrolled {
@@ -31,6 +34,7 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  border-bottom: none;
   .header .menu .menu-item .menu-link {
     color: black;
   }
@@ -74,7 +78,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: fadeInTop 0.6s ease-in;
+
 }
 
 .menu .dropdown {
@@ -94,7 +98,7 @@ header {
 .menu-link {
   font-size: 12.5px;
   line-height: 1.2;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   letter-spacing: 3px;
   text-underline-offset: 4px;

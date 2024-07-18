@@ -8,7 +8,7 @@ class ToplistController extends BaseController {
     }
     // action
     public function index(){
-        $this->view("layout3", ["content" => "toplist"]);
+        $this->view("layout2", ["content" => "toplist"]);
     }
 
 

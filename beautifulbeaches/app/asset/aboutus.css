@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 } */
 
-.section__about-hero {
+/* .section__about-hero {
     background: url('https://worlds50beaches.com/assets/images/press/about-hero.webp') no-repeat center center;
     background-size: cover;
     color: white;
@@ -17,15 +17,16 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .about-hero {
     color: white;
     padding: 20px;
     text-align: center;
-    width: 50%;
-
-
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about-hero .title {

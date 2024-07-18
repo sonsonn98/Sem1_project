@@ -8,7 +8,7 @@ class DetailsController extends BaseController {
     }
     // action
     public function index(){
-        $this->view("layout2", ["content" => "details"]);
+        $this->view("layout", ["content" => "details"]);
     }
 
 

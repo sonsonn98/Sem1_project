@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,14 +22,18 @@
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/faq.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/contact-style.css" />    
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/footer.css" />
-    <link rel="stylesheet" href="/beautifulbeaches/app/asset/sub-header.css" />
+    <link rel="stylesheet" href="/beautifulbeaches/app/asset/header2.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/maincontent.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/slide.css" />
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <title></title>
 </head>
-<body>
+<body style="padding-top: 1px;">
     <?php    
+    $this->view("header");
+    ?> 
+    <div style="margin-top: 200px ;"></div>
+    <?php  
     $this->view($data["content"], $data); 
     $this->view("footer");
     ?>  
@@ -43,5 +45,6 @@
       src="https://kit.fontawesome.com/3687ed1fbf.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/beautifulbeaches/app/asset/scrollHeader.js"></script>
 </body>
 </html>

@@ -2,14 +2,17 @@
 <html lang="en">
 
 <body>
+<div class="c-12 details-container-img">
+        <!-- big img beach -->
+        <img class=" details-big-img" src="https://worlds50beaches.com/assets/images/press/about-hero.webp" alt="">
+
+    </div>
     <main>
         <!-- Section Hero -->
-        <section class="section__about-hero">
-                <div class="about-hero">
+        <section class="about-hero">
                     <div class="title">ABOUT US</div>
                     <p>INSPIRING EPIC BEACH DAYS FOR OVER 7 YEARS.</p>
                 </div>
-            </div>
         </section>
 
         <!-- Section Story -->

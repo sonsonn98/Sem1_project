@@ -25,13 +25,18 @@
         });
     </script>
     <body>
+    <div class="c-12 details-container-img">
+        <!-- big img beach -->
+        <img class=" details-big-img" src="https://img.thuthuatphanmem.vn/uploads/2018/10/03/hinh-anh-khu-du-lich-bien-dep_111549844.jpg" alt="">
 
-<div class="faq-header">
-    <div class="title">FAQ</div>
-    <div class="breadcrumbs">
-        Home / FAQ
     </div>
+<div>
 </div>
+    <div class ="faq-title-wrapper">
+        <div class="title">FAQ</div>
+        <div class="breadcrumbs">Home / FAQ</div>
+    </div>
+
 
 <div class="container">
     <div class="categories">

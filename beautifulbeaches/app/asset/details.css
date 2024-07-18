@@ -21,7 +21,8 @@
 
 .details-container-img {
     position: relative;
-    height: 450px;
+    height: 100%;
+    min-height: 85dvh;
 }
 
 .details-big-img {
