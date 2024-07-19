@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="styleeman.css" rel="stylesheet">
     <title>Image Grid with Captions and Links</title>
 </head>
 <body>
-    <div class="container image-grid">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-12 image-container">
-                <figure class="image-figure">
-                    <a href="https://example.com/image1" class="image-link">
-                        <img src="https://ongvove.com/uploads/0000/1/2022/12/13/ngam-hoang-hon-ngu-sac-o-phu-quoc-ongvove.jpg" class="img-fluid image" alt="Image 1">
-                    </a>
-                    <figcaption class="image-caption">Caption for Image 1</figcaption>
-                </figure>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12 image-container">
-                <figure class="image-figure">
-                    <a href="https://example.com/image2" class="image-link">
-                        <img src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?cs=srgb&dl=pexels-asadphoto-457882.jpg&fm=jpg" class="img-fluid image" alt="Image 2">
-                    </a>
-                    <figcaption class="image-caption">Caption for Image 2</figcaption>
-                </figure>
-            </div>
+    <div class="image-grid">
+        <div class="image-container">
+            <figure class="image-figure">
+                <a href="https://example.com/image1" class="image-link">
+                    <img src="https://ongvove.com/uploads/0000/1/2022/12/13/ngam-hoang-hon-ngu-sac-o-phu-quoc-ongvove.jpg" class="image" alt="Image 1">
+                </a>
+                <figcaption class="image-caption">Caption for Image 1</figcaption>
+            </figure>
+        </div>
+        <div class="image-container">
+            <figure class="image-figure">
+                <a href="https://example.com/image2" class="image-link">
+                    <img src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?cs=srgb&dl=pexels-asadphoto-457882.jpg&fm=jpg" class="image" alt="Image 2">
+                </a>
+                <figcaption class="image-caption">Caption for Image 2</figcaption>
+            </figure>
+        </div>
             <div class="col-md-3 col-sm-6 col-12 image-container">
                 <figure class="image-figure">
                     <a href="https://example.com/image3" class="image-link">
@@ -110,7 +108,6 @@
     </div>
 
     <script>
-      
         window.addEventListener('load', function() {
             var images = document.querySelectorAll('.image');
             images.forEach(function(img) {
@@ -119,7 +116,6 @@
             });
         });
 
-        
         window.addEventListener('pageshow', function(event) {
             if (event.persisted) {
                 var images = document.querySelectorAll('.image');
@@ -133,19 +129,13 @@
         });
     </script>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script>
-        // Trigger reflow on page load
         window.onload = function() {
             var images = document.querySelectorAll('.image');
             images.forEach(function(img) {
-                img.style.transform = 'scale(1)'; // Reset scale
-                img.offsetHeight; // Trigger reflow
-                img.style.transform = ''; // Remove reset
+                img.style.transform = 'scale(1)'; 
+                img.offsetHeight; 
+                img.style.transform = ''; 
             });
         };
     </script>
