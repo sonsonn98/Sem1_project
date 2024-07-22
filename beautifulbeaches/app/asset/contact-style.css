@@ -1,21 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* .contact-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-form {
     font-family: 'Montserrat', sans-serif;
     padding-top: 20px;
-} */
+    background-color: #ffffff; /* Light background for better contrast */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.col-md-8, .col-md-4 {
+    padding: 100px;
+}
+
+.col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 55%;
+}
+
+.col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
 
 .social-network {
     margin-bottom: 20px;
 }
 
 .social-network-title {
+    font-size: 20px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .social-network-list {
+    list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .social-network-item {
@@ -52,40 +89,49 @@
 }
 
 .contact-form .contact-input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid #000;
     border-radius: 0;
     box-shadow: none;
     outline: none;
     font-size: 16px;
-    color: #000;
+    color: #555; /* Lighter color for placeholder text */
+    padding: 10px 5px;
+    background-color: transparent; /* Ensure no background color */
+}
+
+.contact-form .contact-input::placeholder {
+    color: #fff9f9; /* Light grey color for placeholder text */
 }
 
 .contact-form .contact-input:focus {
     box-shadow: none;
     border-color: #000;
 }
-
-.contact-note {
-    font-size: 14px;
-    color: #555;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.border3{
+    outline:none;
+    font-size: 20px;
+    border: none;
+    width: 600px;
+    height: 50px;
+    border-bottom: 1px solid;;
 }
-
 .contact-form .contact-btn {
-    background-color: #fff;
-    border: 1px solid #d8d6d6;
-    border-radius: 0;
+    background-color: #ffffff;
+    border: 1px solid #908f8f; /* Changed to solid black border */
+    border-radius: 2px; /* Small border radius for a slight rounded effect */
     padding: 10px 20px;
     text-transform: uppercase;
-    color: #070707;
+    color: #767676;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-form .contact-btn:hover {
-    background-color: #ebe7e7;
-    color: #fff;
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White text on hover */
 }
 
 .map {
@@ -93,12 +139,13 @@
 }
 
 .map-title {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .contact-info-title {
     padding-bottom: 5px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(125, 124, 124);
     margin-bottom: 10px;
 }
 

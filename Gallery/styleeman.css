@@ -1,8 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
 .image-container {
     position: relative;
     overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .image-container img {
@@ -17,7 +27,13 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 767px) {
+.image-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 1200px) {
     .image-container:hover img {
         transform: scale(1.05);
     }
