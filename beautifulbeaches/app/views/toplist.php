@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <?php $beaches = $data['beaches'];
+        ?>
   <body>
   <main class="main-content">
   <section class="section-destination">
     <div class="container">
-      <h2>THE BEST BEACHES IN THE NORTH, 2024</h2>
+      <h2>THE BEST BEACHES IN THE <?php echo $data['zone']['zone_name']; ?>, 2024</h2>
       <h3>
-        Welcome to the 2024 list of The North's 50 Best Beaches. Our 2024 list is a culmination of countless days spent by our judges, Beach Ambassadors and North's 50 Beaches team exploring beaches all over the world. We hope this list provides the inspiration you need to plan your next beach vacation.
+        Welcome to the 2024 list of The <?php echo $data['zone']['zone_name']; ?>'s 50 Best Beaches. Our 2024 list is a culmination of countless days spent by our judges, Beach Ambassadors and <?php echo $data['zone']['zone_name']; ?>'s 50 Beaches team exploring beaches all over the world. We hope this list provides the inspiration you need to plan your next beach vacation.
       </h3>
       <section class="section-gallery">
         <div class="search-container">
@@ -18,87 +19,42 @@
         </div>
         <div class="gallery-container">
           <div class="gallery row">
+          <?php foreach ($beaches as $beach): ?>
             <div class="l-5-6 m-12 c-12 gallery-item">
+              
               <div class="slider">
-                <div class="slideshow-container" id="slideshow1">
+                <div class="slideshow-container" id="slideshow<?= $beach['id'] ?>">
+                  <?php foreach ($beach['images'] as $image): ?>
                   <div class="mySlides fade">
-                      <img src="/beautifulbeaches/app/asset/image/011.webp" style="width:100%">
+                      <img src="<?= $image['picture_link'] ?>" style="width:100%">
                   </div>
-                  <div class="mySlides fade">
-                      <img src="/beautifulbeaches/app/asset/image/012.webp" style="width:100%">
-                  </div>
-                  <div class="mySlides fade">
-                      <img src="/beautifulbeaches/app/asset/image/013.webp" style="width:100%">
-                  </div>
-                  <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+                  <?php endforeach; ?>
+                  <a class="prev" onclick="plusSlides(-1, 'slideshow<?= $beach['id'] ?>')">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 'slideshow<?= $beach['id'] ?>')">&#10095;</a>
                 </div>
-                <div class="dot-btn" id="dots1">
-                  <span class="dot" onclick="currentSlide(1, 'slideshow1')"></span>
-                  <span class="dot" onclick="currentSlide(2, 'slideshow1')"></span>
-                  <span class="dot" onclick="currentSlide(3, 'slideshow1')"></span>
+                <div class="dot-btn" id="dots<?= $beach['id'] ?>">
+                  <span class="dot" onclick="currentSlide(1, 'slideshow<?= $beach['id'] ?>')"></span>
+                  <span class="dot" onclick="currentSlide(2, 'slideshow<?= $beach['id'] ?>')"></span>
+                  <span class="dot" onclick="currentSlide(3, 'slideshow<?= $beach['id'] ?>')"></span>
                 </div>
               </div>
               <div class="slider-info">
-                <div class="slider-num">#1</div>
+                
                 <div class="slider-titles">
-                  <div class="slider-title">TRUNK BAY</div>
-                  <div class="slider-text">US VIRGIN ISLANDS</div>
+                  <div class="slider-title"><?= $beach['name'] ?></div>
+                  <div class="slider-text"><?= $beach['country_name'] ?></div>
                 </div>
                 <a href="/beautifulbeaches/details/index" class="slider-link">Details</a>
               </div>
             </div>
-            <div class="l-5-6 m-12 c-12 gallery-item">
-              <div class="slider">
-                <div class="slideshow-container" id="slideshow2">
-                  <div class="mySlides fade">
-                    <img src="/beautifulbeaches/app/asset/image/021.webp" style="width: 100%" />
-                  </div>
-                  <div class="mySlides fade">
-                    <img src="/beautifulbeaches/app/asset/image/022.webp" style="width: 100%" />
-                  </div>
-                  <div class="mySlides fade">
-                    <img src="/beautifulbeaches/app/asset/image/023.webp" style="width: 100%" />
-                  </div>
-                  <a class="prev" onclick="plusSlides(-1, 'slideshow2')"
-                    >&#10094;</a
-                  >
-                  <a class="next" onclick="plusSlides(1, 'slideshow2')"
-                    >&#10095;</a
-                  >
-                </div>
-                <div class="dot-btn" id="dots2">
-                  <span
-                    class="dot"
-                    onclick="currentSlide(1, 'slideshow2')"
-                  ></span>
-                  <span
-                    class="dot"
-                    onclick="currentSlide(2, 'slideshow2')"
-                  ></span>
-                  <span
-                    class="dot"
-                    onclick="currentSlide(3, 'slideshow2')"
-                  ></span>
-                </div>
-              </div>
-              <div class="slider-info">
-                <div class="slider-num">#2</div>
-                <div class="slider-titles">
-                  <div class="slider-title">CALA MARIOLU</div>
-                  <div class="slider-text">ITALY</div>
-                </div>
-                <a href="" class="slider-link">Details</a>
-              </div>
-            </div>
+            <?php endforeach; ?>
+            
           </div>
         </div>
       </section>
     </div>
   </section>
 </main>
-
-
 
     <script src="/beautifulbeaches/app/asset/slide.js
     "></script>

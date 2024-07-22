@@ -2,7 +2,11 @@
 <html lang="en">
 
 <body>
+<?php
 
+    $zones = $data['zones'];
+   
+?>
 <header class="sub-header" id="scrollHeader">
       <nav class="header">
         <ul class="menu">
@@ -11,10 +15,9 @@
             <div class="submenu">
               <a href="#" class="menu-link"></a>
               <ul class="submenu-list">
-                <li><a href="" class="menu-link">WEST</a></li>
-                <li><a href="" class="menu-link">EAST</a></li>
-                <li><a href="" class="menu-link">SOUTH</a></li>
-                <li><a href="" class="menu-link">NORTH</a></li>
+              <?php foreach ($zones as $zone): ?>
+                                <li><a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="menu-link"><?= $zone['zone_name']; ?></a></li>
+                            <?php endforeach; ?>
               </ul>
             </div>
           </li>

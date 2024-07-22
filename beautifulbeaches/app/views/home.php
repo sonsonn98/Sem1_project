@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>  
-
+  <?php
+    $zones = $data['zones'];
+?>
   <div class="c-12 home-container-img">
-        <!-- big img beach -->
         <img class=" details-big-img" src="/beautifulbeaches/app/asset/image/hero_bg.jpg" alt="">
 
     </div>
@@ -17,38 +18,16 @@
         <div class="discover-container">
           <h2>DISCOVER BEST BEACHES ON EARTH</h2>
           <div class="discover row">
+            <?php foreach ($zones as $zone): ?>
             <div class="discover-item l-3 m-6 c-12">
-              <img src="/beautifulbeaches/app/asset/image/north.webp" alt="NORTH" class="discover-image" />
+              <img src="<?= ($zone['zone_img_link']) ?>" alt="<?= $zone['zone_name']; ?>" class="discover-image" />
               <p class="discover-title">
-                NORTH
+              <?= $zone['zone_name']; ?>
                 <span>2024</span>
               </p>
-              <a href="/beautifulbeaches/toplist/index" class="discover-link">VIEW LIST</a>
+              <a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="discover-link">VIEW LIST</a>
             </div>
-            <div class="discover-item l-3 m-6 c-12">
-              <img src="/beautifulbeaches/app/asset/image/SOUTH.webp" alt="SOUTH" class="discover-image" />
-              <p class="discover-title">
-                SOUTH
-                <span>2024</span>
-              </p>
-              <a href="" class="discover-link">VIEW LIST</a>
-            </div>
-            <div class="discover-item l-3 m-6 c-12">
-              <img src="/beautifulbeaches/app/asset/image/north.webp" alt="NORTH" class="discover-image" />
-              <p class="discover-title">
-                EAST
-                <span>2024</span>
-              </p>
-              <a href="" class="discover-link">VIEW LIST</a>
-            </div>
-            <div class="discover-item l-3 m-6 c-12">
-              <img src="/beautifulbeaches/app/asset/image/SOUTH.webp" alt="SOUTH" class="discover-image" />
-              <p class="discover-title">
-                WEST
-                <span>2024</span>
-              </p>
-              <a href="" class="discover-link">VIEW LIST</a>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </section>

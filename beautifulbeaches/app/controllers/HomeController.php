@@ -8,7 +8,8 @@ class HomeController extends BaseController {
     }
     // action
     public function index(){
-        $this->view("layout", ["content" => "home"]);
+        $zones=$this->__homeModel->getAllZones();
+        $this->view("layout", ["content" => "home","zones" => $zones]);
     }
 
 

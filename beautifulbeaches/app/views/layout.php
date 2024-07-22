@@ -31,7 +31,7 @@
 </head>
 <body>
     <?php    
-    $this->view("header");
+    $this->view("header",$data);
     $this->view($data["content"], $data); 
     $this->view("footer");
     ?>  

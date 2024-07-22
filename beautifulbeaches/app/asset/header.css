@@ -102,7 +102,6 @@ header {
 
 .menu-link:hover {
   text-decoration: underline;
-  color: black;
 }
 
 .submenu {
@@ -128,6 +127,7 @@ header {
   }
   li {
     position: relative;
+    text-transform: uppercase;
   }
 }
 

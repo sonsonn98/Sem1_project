@@ -52,9 +52,9 @@ section {
 
 .discover-image {
   max-width: 100%;
+  max-height: 417.23px;
   width: 100%;
-  height: auto;
-  max-height: 600px;
+  
 }
 
 .discover-title {

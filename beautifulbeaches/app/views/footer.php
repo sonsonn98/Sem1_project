@@ -107,7 +107,7 @@
                   I would like to be kept updated on exclusive news, travel
                   inspiration and offers from The World’s 50 Best Beaches. To
                   learn more about how we store and process your data, visit our
-                  <a href="">Privacy Policy</a> .
+                  <a href="">Privacy Policy</a>.
                 </p>
                 <button type="submit" value="submit" class="footer-form-btn">
                   SIGN UP

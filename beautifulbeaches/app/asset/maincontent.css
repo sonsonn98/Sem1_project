@@ -33,6 +33,10 @@ h3 {
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
+  margin-top: 100px;
+  h2 {
+    text-transform: uppercase;
+  }
 }
 
 .gallery {
@@ -72,7 +76,7 @@ h3 {
   color: black;
   border: 2px solid #ccc;
   border-radius: 5px;
-  padding:  5px 10px ;
+  padding: 5px 10px;
   cursor: pointer;
   margin-left: 5px;
   height: 41.6px;
@@ -86,4 +90,3 @@ h3 {
   left: -30px;
   height: 10px;
 }
-

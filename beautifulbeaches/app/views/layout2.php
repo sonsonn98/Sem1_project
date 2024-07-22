@@ -25,14 +25,11 @@
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/header2.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/maincontent.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/slide.css" />
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+  
     <title></title>
-</head>
-<body style="padding-top: 1px;">
-    <?php    
-    $this->view("header");
-    ?> 
-    <div style="margin-top: 200px ;"></div>
+    </head>
+    <body style="padding-top: 1px;">
+    <?php $this->view("header", $data); ?> 
     <?php  
     $this->view($data["content"], $data); 
     $this->view("footer");
