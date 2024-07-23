@@ -4,6 +4,20 @@
     padding: 0;
 }
 
+#details-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
 /* .details-body {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.10rem;
@@ -41,7 +55,7 @@
 .details-beach-container {
     position: relative;
     margin-top: -135px;
-    
+
 }
 
 .details-beach-header {
@@ -165,7 +179,7 @@
 }
 
 .details-hotel-title {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
@@ -204,7 +218,7 @@
 
 .details-more-item {
     width: 48%;
-    height: auto; 
+    height: auto;
 }
 
 .details-more {
@@ -281,4 +295,70 @@
 
 .details-list-info li {
     margin-top: 20px;
+}
+
+/* review */
+.details-review {
+    width: 100%;
+    padding: 100px 60px;
+}
+
+.details-review-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-review-left {
+    background-color: #faf9f7;
+    width: 35%;
+    height: 260px;
+    padding: 15px;
+}
+
+.details-rating-left {
+    width: 50%;
+    text-align: center;
+}
+
+.details-rating-right {
+    width: 50%;
+    height: auto;
+    padding: 15px 35px;
+}
+
+.details-rating-star {
+    width: 100%;
+}
+
+.details-review-rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-review-right {
+    width: 50%;
+    height: 260px;
+}
+
+.details-review-comment {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-review-object {
+    padding: 10px 0;
+}
+
+
+/* responsive */
+@media (max-width: 1024px) {
+
+    .details-review-left {
+        width: 50%;
+    }
+
+
 }

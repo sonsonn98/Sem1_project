@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/reponsive.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/home.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/details.css" />
+    <link rel="stylesheet" href="/beautifulbeaches/app/asset/rating.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/aboutus.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/faq.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/contact-style.css" />    

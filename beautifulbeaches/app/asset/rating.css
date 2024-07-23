@@ -1,0 +1,53 @@
+/* Style for the button */
+button.review-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the form */
+div.review-form-container {
+    display: none;
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 550px;
+    z-index: 9999;
+}
+
+div.review-form-container h2 {
+    margin-top: 0;
+}
+
+button.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Star rating styles */
+span.star-rating {
+    display: inline-block;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+span.star-rating span.star {
+    color: lightgray;
+    transition: color 0.2s ease-in-out;
+}
+
+span.star-rating span.star.filled {
+    color: gold;
+}
