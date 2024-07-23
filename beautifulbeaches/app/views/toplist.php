@@ -44,7 +44,7 @@
                   <div class="slider-title"><?= $beach['name'] ?></div>
                   <div class="slider-text"><?= $beach['country_name'] ?></div>
                 </div>
-                <a href="/beautifulbeaches/details/index" class="slider-link">Details</a>
+                <a href="/beautifulbeaches/details/index?id=<?= $beach['id'] ?>" class="slider-link">Details</a>
               </div>
             </div>
             <?php endforeach; ?>

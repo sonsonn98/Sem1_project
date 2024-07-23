@@ -119,5 +119,9 @@
         </div>
       </div>
     </footer>
+
+    <div class="ticker" id="ticker">
+      <span id="tickerContent">...</span>
+    </div>
 </body>
 </html>
