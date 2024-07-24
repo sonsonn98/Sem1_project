@@ -16,18 +16,18 @@
                     </ul>
                 </div>
                 <p>Viết nội dung ở đây </p>
-                <form class="contact-form">
+                <form method="POST" action="http://localhost/beautifulbeaches/contactus/savecontact" class="contact-form">
                     <div class="form-group">
                         <label for="name" class="contact-label">Name *</label>
-                        <input class="border3" type="text" id="name" placeholder="Enter your name" required>
+                        <input class="border3" type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="contact-label">Email *</label>
-                        <input class="border3"type="email" id="email" placeholder="Enter your email" required>
+                        <input class="border3" type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
                         <label for="message" class="contact-label">Message *</label>
-                        <textarea class="border3" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <textarea class="border3" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                     </div>
                     <button type="submit" class="contact-btn">Submit</button>
                 </form>
@@ -45,6 +45,5 @@
             </div>
         </div>
     </div>
-</body>
 </body>
 </html>
