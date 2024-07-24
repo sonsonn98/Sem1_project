@@ -470,9 +470,7 @@
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-            </span>
-            <input type="text" id="rating" name="rating" value="">
-
+            </span><br>
             <label for="name">Your name (optional):</label><br>
             <input style="width: 100%;height: 50px;font-size: 20px;" type="text" id="name" name="name"><br><br>
             <label for="comments">Review comments (optional):</label>
