@@ -1,90 +1,72 @@
-/* * {
-    font-family: Arial, sans-serif;
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    line-height: 1.6;
-} */
-
-/* .section__about-hero {
-    background: url('https://worlds50beaches.com/assets/images/press/about-hero.webp') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    height: 520px ;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-.about-hero {
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.about-hero .title {
-    margin: 0;
-    font-size: 48px;
-}
-
-.about-hero p {
-    color: white;
-    font-size: 16px;
-}
-
+/* Section Story */
 .section__story {
     padding: 4rem 2rem;
     text-align: center;
 }
 
 .story__title {
+    font-family: 'Georgia', serif;
     font-size: 2rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid black;
+    display: inline-block;
 }
 
 .story__text {
+    font-family: 'Georgia', serif;
     font-size: 1.125rem;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
 
+/* Mission Section */
 .mission {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4rem 2rem;
+    text-align: center;
+    gap: 20px;
 }
 
 .mission__image-left,
 .mission__image-right {
-    width: 35%;
+    width: 45%;
+    max-width: 400px;
+    object-fit: cover;
 }
 
 .mission__info {
-    text-align: center;
-    margin: 0 20px;
+    max-width: 45%;
 }
 
 .mission__subtitle {
+    font-family: 'Lora', serif;
     font-size: 1rem;
     margin-bottom: 1rem;
     letter-spacing: 0.1em;
+    border-bottom: 2px solid black;
+    display: inline-block;
 }
 
 .mission__title {
     font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-bottom: 2px solid black;
+    display: inline-block;
 }
 
+/* Terms List */
 .terms__list {
-    text-align: left;
     max-width: 800px;
     margin: 0 auto;
     padding-left: 20px;
@@ -95,6 +77,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Image Section */
 .image-section {
     padding: 4rem 2rem;
     text-align: center;
@@ -106,7 +89,91 @@ body {
 }
 
 .image-section p {
+    font-family: 'Georgia', serif;
     font-size: 1.125rem;
     max-width: 800px;
     margin: 1rem auto;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+    .story__title {
+        font-size: 1.5rem;
+    }
+
+    .story__text {
+        font-size: 1rem;
+    }
+
+    .mission {
+        flex-direction: column;
+    }
+
+    .mission__image-left,
+    .mission__image-right,
+    .mission__info {
+        width: 100%;
+        max-width: none;
+    }
+
+    .mission__title {
+        font-size: 1.2rem;
+    }
+
+    .mission__subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 10px;
+    }
+
+    .about-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-hero p {
+        font-size: 0.8rem;
+    }
+
+    .story__title {
+        font-size: 1.2rem;
+    }
+
+    .story__text {
+        font-size: 0.9rem;
+    }
+
+    .mission__title {
+        font-size: 1rem;
+    }
+
+    .terms__link {
+        font-size: 1rem;
+    }
+
+    .image-section p {
+        font-size: 1rem;
+    }
 }

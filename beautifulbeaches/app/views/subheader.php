@@ -16,13 +16,13 @@
               <a href="#" class="menu-link"></a>
               <ul class="submenu-list">
               <?php foreach ($zones as $zone): ?>
-                                <li><a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="menu-link"><?= $zone['zone_name']; ?></a></li>
-                            <?php endforeach; ?>
+                <li><a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="menu-link"><?= $zone['zone_name']; ?></a></li>
+              <?php endforeach; ?>
               </ul>
             </div>
           </li>
           <li class="menu-item">
-            <a href="/beautifulbeaches/toplist/index" class="menu-link">BEST OF THE BEST</a>
+            <a href="#" class="menu-link">BEST OF THE BEST</a>
           </li>
           <li class="menu-item">
             <a href="" class="menu-link">GALERRY</a>

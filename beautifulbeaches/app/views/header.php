@@ -18,7 +18,7 @@
                 </div>
             </li>
             <li class="menu-item">
-                <a href="/beautifulbeaches/toplist/index" class="menu-link">BEST OF THE BEST</a>
+                <a href="#" class="menu-link">BEST OF THE BEST</a>
             </li>
             <li class="menu-item">
                 <a href="#" class="menu-link">GALLERY</a>
