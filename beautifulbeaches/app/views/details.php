@@ -5,7 +5,11 @@
     <?php $beach = $data['beach'];
         $image = $data['image'][0]; 
         $map = $data['map'][0];
+        $slideimgs = $data['slideimgs'];
+        $middleimg = $data['middleimg'][0];
         $traits = $data['traits'];
+        $infos = $data['infos'];
+        $weathers = $data['weathers'];
     ?>
     <div id="details-overlay" onclick="off()"></div>
         <div class="c-12 details-container-img">
@@ -24,8 +28,8 @@
                     <p class="details-beach-icon">
                         <img style="width: 35px;" src="/beautifulbeaches/app/asset/image/icon.png" alt="">
                     </p>
-                    <p class="header-p" style="font-style: italic;-webkit-text-stroke: 0.01px rgb(225, 225, 225);">#4 in the
-                        world</p>
+                    <!-- <p class="header-p" style="font-style: italic;-webkit-text-stroke: 0.01px rgb(225, 225, 225);">#4 in the
+                        world</p> -->
                 </div>
 
                 <!-- section beach -->
@@ -81,15 +85,17 @@
                 <!-- section images -->
                 <div class="details-images">
                     <div class="details-images">
+                        <?php foreach($slideimgs as $slideimg): ?>
                         <div class="details-images-item">
-                            <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/042.webp" alt="">
+                            <img style="width: 100%;height: 100%;" src="<?= $slideimg['picture_link'] ?>" alt="">
                         </div>
-                        <div class="details-images-item">
+                        <?php endforeach; ?>
+                        <!-- <div class="details-images-item">
                             <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/043.webp" alt="">
                         </div>
                         <div class="details-images-item">
                             <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/044.webp" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- section hotel -->
@@ -106,13 +112,13 @@
                         </div>
                     </div>
                     <div class="details-img-bg">
-                        <img style="width: 100%;height: 100%;object-fit: cover;" src="/beautifulbeaches/app/asset/image/045.webp" alt="">
+                        <img style="width: 100%;height: 100%;object-fit: cover;" src="<?= $middleimg['picture_link'] ?>" alt="">
                     </div>
                 </div>
                 <div class="details-container-more">
                     <div class="details-more">
                         <div class="details-more-item">
-                            <p class="details-more-title">Voutoumi Beach WEATHER AVERAGES</p>
+                            <p class="details-more-title"><?= $beach['name'] ?> WEATHER AVERAGES</p>
                             <table class="details-more-table">
                                 <thead>
                                     <tr>
@@ -123,177 +129,39 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($weathers as $weather): ?>
                                     <tr>
-                                        <td class="details-table-month">january</td>
+                                        
+                                        <td class="details-table-month"><?= $weather['month'] ?></td>
                                         <td>
-                                            <span>14</span>
+                                            <span><?= $weather['avg_high'] ?></span>
                                             °
                                         </td>
                                         <td>
-                                            <span>8</span>
+                                            <span><?= $weather['avg_low'] ?></span>
                                             °
                                         </td>
-                                        <td>10</td>
+                                        <td><?= $weather['rainy_days'] ?></td>
+                                        
                                     </tr>
-                                    <tr>
-                                        <td class="details-table-month">february</td>
-                                        <td>
-                                            <span>14</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>8</span>
-                                            °
-                                        </td>
-                                        <td>10.2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">march</td>
-                                        <td>
-                                            <span>16</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>9</span>
-                                            °
-                                        </td>
-                                        <td>9.2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">april</td>
-                                        <td>
-                                            <span>18</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>12</span>
-                                            °
-                                        </td>
-                                        <td>7.3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">may</td>
-                                        <td>
-                                            <span>22</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>15</span>
-                                            °
-                                        </td>
-                                        <td>4.5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">june</td>
-                                        <td>
-                                            <span>26</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>19</span>
-                                            °
-                                        </td>
-                                        <td>2.2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">july</td>
-                                        <td>
-                                            <span>26</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>21</span>
-                                            °
-                                        </td>
-                                        <td>1.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">august</td>
-                                        <td>
-                                            <span>28</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>21</span>
-                                            °
-                                        </td>
-                                        <td>2.6</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">september</td>
-                                        <td>
-                                            <span>26</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>19</span>
-                                            °
-                                        </td>
-                                        <td>5.7</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">october</td>
-                                        <td>
-                                            <span>22</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>16</span>
-                                            °
-                                        </td>
-                                        <td>8.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">november</td>
-                                        <td>
-                                            <span>18</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>12</span>
-                                            °
-                                        </td>
-                                        <td>11.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="details-table-month">december</td>
-                                        <td>
-                                            <span>15</span>
-                                            °
-                                        </td>
-                                        <td>
-                                            <span>9</span>
-                                            °
-                                        </td>
-                                        <td>12.1</td>
-                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                             <a style="object-fit: cover;display: flex;justify-content: right;" href="">
-                                <span style="font-size: 12.5px;text-transform: uppercase;color: #000;">IN-DEPTH Voutoumi Beach WEATHER DATA</span>
+                                <span style="font-size: 12.5px;text-transform: uppercase;color: #000;">IN-DEPTH <?= $beach['name'] ?> WEATHER DATA</span>
                                 <img style="width: 15px;height: 15px;margin-left: 5px;" src="/beautifulbeaches/app/asset/image/link-icon-black.svg" alt="">
                             </a>
                         </div>
                         <div class="details-more-item more-item-right">
                             <div class="details-right-info">
-                                <p class="details-more-title-right">THE PERFECT DAY AT Voutoumi Beach</p>
+                                <p class="details-more-title-right">THE PERFECT DAY AT <?= $beach['name'] ?></p>
                                 <ul class="details-list-info">
+                                    <?php foreach($infos as $info): ?>
                                     <li>
-                                        <p style="font-size: 13.5px;font-weight: bolder;">WIND</p>
-                                        <p style="font-size: 12.5px;">Look for days where the wind will be blowing from behind the beach towards the water, as well as days with little to no wind.</p>
+                                        <p style="font-size: 13.5px;font-weight: bolder;"><?= $info['more_info_name'] ?></p>
+                                        <p style="font-size: 12.5px;"><?= $info['more_info_content'] ?></p>
                                     </li>
-                                    <li>
-                                        <p style="font-size: 13.5px;font-weight: bolder;">HIGH SEASON</p>
-                                        <p style="font-size: 12.5px;">High season peaks in July and August, and Voutoumi Beach is much busier during those months than it is at other times of the year. June and September are a great compromise with less crowds and excellent weather.</p>
-                                    </li>
-                                    <li>
-                                        <p style="font-size: 13.5px;font-weight: bolder;">CALM SEAS</p>
-                                        <p style="font-size: 12.5px;">The Mediterranean is much calmer from June through October, which is the best time of year to visit Voutoumi Beach.</p>
-                                    </li>
-                                    <li>
-                                        <p style="font-size: 13.5px;font-weight: bolder;">TIME OF DAY</p>
-                                        <p style="font-size: 12.5px;">Due to the popularity of European beaches in summer, we recommend visiting Voutoumi Beach fairly early in the morning to enjoy it without it being very crowded.</p>
-                                    </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>

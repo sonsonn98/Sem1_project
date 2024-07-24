@@ -7,7 +7,9 @@ class DetailsModel {
         
     public function getBeachDetail($beach_id) {
         try {
-            $sql = " SELECT b.id, b.name, b.description, c.country_name,b.description_title,b.trait1_id, b.trait2_id, b.trait3_id
+            $sql = " SELECT b.id, b.name, b.description, c.country_name,
+            b.description_title,b.trait1_id, b.trait2_id, b.trait3_id,
+            b.more_info1_id,b.more_info2_id,b.more_info3_id,b.more_info4_id
                 FROM beaches b
                 JOIN countries c ON b.country_id = c.country_id
                 WHERE b.id = :beach_id";
@@ -39,13 +41,42 @@ class DetailsModel {
     public function getTraitsByIds($trait1_id, $trait2_id, $trait3_id) {
         try {
             $sql = "
-                SELECT trait_id, trait_name, trait_description, trait_img
+                SELECT *
                 FROM traits
                 WHERE trait_id IN (:trait1_id, :trait2_id, :trait3_id)";
             $stmt = $this->__conn->prepare($sql);
             $stmt->bindParam(':trait1_id', $trait1_id, PDO::PARAM_INT);
             $stmt->bindParam(':trait2_id', $trait2_id, PDO::PARAM_INT);
             $stmt->bindParam(':trait3_id', $trait3_id, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function getMoreInfoByIds($more_info1_id, $more_info2_id, $more_info3_id, $more_info4_id) {
+        try {
+            $sql = "
+                    SELECT * FROM more_info
+                    WHERE more_info_id IN (:more_info1_id, :more_info2_id, :more_info3_id, :more_info4_id)";
+            $stmt = $this->__conn->prepare($sql);
+            $stmt->bindParam('more_info1_id', $more_info1_id, PDO::PARAM_INT);
+            $stmt->bindParam('more_info2_id', $more_info2_id, PDO::PARAM_INT);
+            $stmt->bindParam('more_info3_id', $more_info3_id, PDO::PARAM_INT);
+            $stmt->bindParam('more_info4_id', $more_info4_id, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function getBeachWeather($beach_id) {
+        try {
+            $sql = "SELECT * from beach_weather where beach_id = :beach_id order by month asc";
+            $stmt = $this->__conn->prepare($sql);
+            $stmt->bindParam('beach_id', $beach_id, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch(PDOException $e) {
