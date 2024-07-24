@@ -2,12 +2,15 @@
 <html lang="en">
 
 <body>
-    
+    <?php $beach = $data['beach'];
+        $image = $data['image'][0]; 
+        $map = $data['map'][0];
+        $traits = $data['traits'];
+    ?>
     <div id="details-overlay" onclick="off()"></div>
-
         <div class="c-12 details-container-img">
             <!-- big img beach -->
-            <img class=" details-big-img" src="https://worlds50beaches.com/assets/images/beaches-2024/041.webp" alt="">
+            <img class=" details-big-img" src="<?= $image['picture_link'] ?>" alt="">
         </div>
 
 
@@ -16,8 +19,8 @@
             <div class="details-beach-container">
                 <!-- beach header -->
                 <div class="details-beach-header details-padding">
-                    <p class="details-header-title header-p">Entalula Beach</p>
-                    <p class="details-header-subtitle header-p">Philippines</p>
+                    <p class="details-header-title header-p"><?= $beach['name'] ?></p>
+                    <p class="details-header-subtitle header-p"><?= $beach['country_name'] ?></p>
                     <p class="details-beach-icon">
                         <img style="width: 35px;" src="/beautifulbeaches/app/asset/image/icon.png" alt="">
                     </p>
@@ -28,40 +31,32 @@
                 <!-- section beach -->
                 <div class="details-beach-body details-padding">
                     <div class="details-beach-about">
-                        <p class="details-beach-tilte">PALAWAN'S OVERLOOKED SLICE OF HEAVEN</p>
+                        <p class="details-beach-tilte"><?= $beach['description_title'] ?></p>
                         <p class="details-beach-text">
-
-                            Loved for its amazing seclusion, Entalula Beach in Palawan, Philippines, impresses with its
-                            striking limestone cliffs that provide a stunning and dramatic backdrop to its white, sandy
-                            shores. This beach is less frequented than others in the area, offering visitors a chance to
-                            escape the usual tourist spots and truly immerse themselves in nature. The water is remarkably
-                            clear, providing excellent conditions for both swimming and snorkeling, where visitors can
-                            explore vibrant coral reefs just a short swim from the shore. Accessible only by boat, Entalula
-                            adds an element of adventure and exclusivity to any visit. Its striking natural features and
-                            tranquil atmosphere make it a coveted spot for relaxation and appreciating nature.
-
+                        <?= $beach['description'] ?>
                         </p>
                     </div>
                     <div class="details-beach-img">
-                        <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/map-2024-04.jpg" alt="">
+                        <img style="width: 100%;height: 100%;" src="<?= $map['picture_link'] ?>" alt="">
                     </div>
                 </div>
                 <!-- section pluses -->
                 <div class="details-padding">
                     <div class="details-pluses">
+                        <?php foreach($traits as $trait): ?>
                         <div class="details-pluses-item">
                             <div class="details-pluses-img">
-                                <img class="details-img" src="/beautifulbeaches/app/asset/image/f1.webp" alt="">
+                                <img class="details-img" src="<?= $trait['trait_img'] ?>" alt="">
                             </div>
                             <div class="details-pluses-info">
-                                <p class="details-pluses-title">UNIQUE</p>
-                                <p class="details-pluses-text">The surrounding landscape of Entalula Beach makes it very
-                                    unique.
+                                <p class="details-pluses-title"><?= $trait['trait_name'] ?></p>
+                                <p class="details-pluses-text"><?= $trait['trait_description'] ?>
 
                                 </p>
                             </div>
                         </div>
-                        <div class="details-pluses-item">
+                        <?php endforeach; ?>
+                        <!-- <div class="details-pluses-item">
                             <div class="details-pluses-img">
                                 <img class="details-img" src="/beautifulbeaches/app/asset/image/f3.webp" alt="">
                             </div>
@@ -80,7 +75,7 @@
                                 <p class="details-pluses-text">Entalula Beach is never too crowded, making it very peaceful.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- section images -->
@@ -429,6 +424,7 @@
                 <button type="submit">Submit rating</button>
             </form>
         </div>
+
 
 
     <!-- fontawesome -->
