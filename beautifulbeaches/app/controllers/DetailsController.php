@@ -12,8 +12,11 @@ class DetailsController extends BaseController {
     public function index(){
         $zones=$this->__homeModel->getAllZones();
         $this->view("layout", ["content" => "details", "zones" => $zones]);
+
+        
     }
 
+    
 
 }
 
