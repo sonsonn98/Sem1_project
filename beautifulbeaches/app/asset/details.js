@@ -43,18 +43,11 @@ function off() {
 }
 
 // pick stars
-stars = document.querySelectorAll('star');
-const ratingInput = document.getElementById('rating');
-
-stars.forEach(star => {
-    star.addEventListener('click', () => {
-        ratingInput.value = star.getAttribute('data-value');
-        stars.forEach(s => s.classList.remove('selected'));
-        star.classList.add('selected');
-        let prevSibling = star.previousElementSibling;
-        while (prevSibling) {
-            prevSibling.classList.add('selected');
-            prevSibling = prevSibling.previousElementSibling;
-        }
+const starsPick = document.querySelectorAll('.star');
+const input = document.getElementById('starValue');
+starsPick.forEach(starsPick => {
+    starsPick.addEventListener('click', function() {
+        const value = this.getAttribute('data-value');
+        input.value = value;
     });
 });

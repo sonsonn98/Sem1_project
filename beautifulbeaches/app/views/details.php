@@ -2,49 +2,10 @@
 <html lang="en">
 
 <body>
-    <!-- overlay -->
     <div id="details-overlay" onclick="closeReviewForm(), closeReviewComment(), off()"></div>
-
+    <?php $beaches = $data['beaches']; ?>
     <div class="c-12 details-container-img">
-        <!-- big img beach -->
         <img class=" details-big-img" src="http://localhost/beautifulbeaches/app/asset/image/013.webp" alt="">
-
-        <!-- <header class="sub-header">
-      <nav class="header">
-        <ul class="menu">
-          <li class="menu-item dropdown">
-            <a href="" class="menu-link">THE LISTS</a>
-            <div class="submenu">
-              <a href="#" class="menu-link"></a>
-              <ul class="submenu-list">
-                <li><a href="" class="menu-link">WEST</a></li>
-                <li><a href="" class="menu-link">EAST</a></li>
-                <li><a href="" class="menu-link">SOUTH</a></li>
-                <li><a href="" class="menu-link">NORTH</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu-item">
-            <a href="/beautifulbeaches/toplist/index" class="menu-link">BEST OF THE BEST</a>
-          </li>
-          <li class="menu-item">
-            <a href="" class="menu-link">GALERRY</a>
-          </li>
-          <li class="menu-item logo">
-            <a href="/beautifulbeaches/home/index"><img width="100" src="/beautifulbeaches/app/asset/image/transparentlogo.png" alt="" /></a>
-          </li>
-          <li class="menu-item">
-            <a href="/beautifulbeaches/contactus/index" class="menu-link">CONTACT US</a>
-          </li>
-          <li class="menu-item">
-            <a href="/beautifulbeaches/faq/index" class="menu-link">FAQ</a>
-          </li>
-          <li class="menu-item">
-            <a href="/beautifulbeaches/aboutus/index" class="menu-link">ABOUT US</a>
-          </li>
-        </ul>
-      </nav>
-    </header> -->
     </div>
 
 
@@ -61,7 +22,6 @@
                 <p class="header-p" style="font-style: italic;-webkit-text-stroke: 0.01px rgb(225, 225, 225);">#4 in the
                     world</p>
             </div>
-
             <!-- section beach -->
             <div class="details-beach-body details-padding">
                 <div class="details-beach-about">
@@ -447,10 +407,24 @@
     </main>
 
     <!-- ReviewAll -->
-    <div id="openreviewcomment" class="details-review-all-comment">
+    <div id="openreviewcomment">
         <button class="close-button" onclick="closeReviewComment(), off()">×</button>
         <h2>Comment All</h2>
-
+        <div class="details-review-comment">
+            <div style="width: 100%;text-align: right;">
+                <div class="details-review-object">
+                    <span>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                    </span>
+                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -462,7 +436,7 @@
         <p>Rating (out of 5)*:</p>
         <p>Just give a star rating or feel free to add a comment too...</p>
         <?php ?>
-        <form action="http://localhost/beautifulbeaches/details/addtoreview" method="POST">
+        <form action="http://localhost/beautifulbeaches/details/saveReview?id=<?= $beach['id'] ?>" method="POST">
             <!-- Star rating -->
             <span class="star-rating" id="starRating">
                 <span class="star" data-value="1">★</span>
@@ -471,17 +445,12 @@
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
             </span><br>
+            <input type="hidden" id="starValue" name="starValue">
             <label for="name">Your name (optional):</label><br>
-            <input style="width: 100%;height: 50px;font-size: 20px;" type="text" id="name" name="name"><br><br>
+            <input class="name-form-review" type="text" id="name" name="name"><br><br>
             <label for="comments">Review comments (optional):</label>
-            <textarea style="width: 100%;height: 200px;font-size: 20px;" id="comments" name="comments"></textarea><br><br>
-            <button onclick="closeReviewForm(), off()" style="
-                width: 100px;
-                height: 40px;
-                text-align: center;
-                align-items: center;
-                font-weight: bolder;
-                font-size: 20px;" class="rating-form-btn-submit" type="submit">
+            <textarea class="comment-form-review" id="comments" name="comments"></textarea><br><br>
+            <button onclick="closeReviewForm(), off()" class="rating-form-btn-submit" type="submit">
                 Submit
             </button>
         </form>
