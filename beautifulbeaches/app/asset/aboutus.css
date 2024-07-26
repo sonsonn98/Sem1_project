@@ -1,4 +1,4 @@
-
+/* Basic styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -91,6 +91,7 @@
     margin: 1rem auto;
 }
 
+/* Responsive styles */
 @media (max-width: 1024px) {
     .about-hero h1 {
         font-size: 2.5rem;
