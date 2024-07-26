@@ -365,10 +365,10 @@
     cursor: pointer;
 }
 
-.details-review-all-comment {
+#openreviewcomment {
     display: none;
     position: fixed;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -376,6 +376,8 @@
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 650px;
+    max-height: 500px;
+    overflow-y: auto;
     z-index: 9999;
 }
 

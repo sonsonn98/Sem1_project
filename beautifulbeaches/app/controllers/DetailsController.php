@@ -11,12 +11,18 @@ class DetailsController extends BaseController {
     // action
     public function index(){
         $zones=$this->__homeModel->getAllZones();
-        $this->view("layout", ["content" => "details", "zones" => $zones]);
-
-        
+        $reviews=$this->__detailsModel->getAllReviews();
+        $this->view("layout", ["content" => "details", "zones" => $zones, "reviewers"=> $reviews]);
     }
 
-    
+    public function saveReviews($beachc_id) {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $starValue = $_POST["starValue"]; 
+            $name = $_POST["name"];
+            $comments = $_POST["comments"];
+            $this->__detailsModel->saveReview($starValue,$beachc_id,$name,$comments);
+        }
+    }
 
 }
 
