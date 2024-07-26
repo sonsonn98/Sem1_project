@@ -266,7 +266,8 @@
             </div>
         </main>
 
-        <div id="openreviewcomment">
+    <!-- ReviewAll -->
+    <div id="openreviewcomment">
         <button class="close-button" onclick="closeReviewComment(), off()">×</button>
         <h2>Comment All</h2>
         <div class="details-review-comment">
@@ -283,8 +284,6 @@
                     <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
                 </div>
             </div>
-        </div>
-
         </div>
 
         <!-- Review form container -->
