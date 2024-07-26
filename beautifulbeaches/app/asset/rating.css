@@ -21,8 +21,7 @@ div.review-form-container {
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 560px;
-    height: 600px;
+    width: 550px;
     z-index: 9999;
 }
 
@@ -54,25 +53,4 @@ span.star-rating span.star {
 
 span.star-rating span.star.filled {
     color: gold;
-}
-
-.name-form-review {
-    width: 100%;
-    height: 50px;
-    font-size: 20px;
-}
-
-.comment-form-review {
-    width: 100%;
-    height: 200px;
-    font-size: 20px;
-}
-
-.rating-form-btn-submit {
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 20px;
 }
