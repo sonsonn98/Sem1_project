@@ -11,7 +11,7 @@ class FaqController extends BaseController {
     // action
     public function index(){
         $zones = $this->__homeModel->getAllZones();
-        $this->view("layout", ["content" => "faq","zones"=> $zones]);
+        $this->view("layout2", ["content" => "faq","zones"=> $zones]);
     }
 
 

@@ -90,12 +90,6 @@
                             <img style="width: 100%;height: 100%;" src="<?= $slideimg['picture_link'] ?>" alt="">
                         </div>
                         <?php endforeach; ?>
-                        <!-- <div class="details-images-item">
-                            <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/043.webp" alt="">
-                        </div>
-                        <div class="details-images-item">
-                            <img style="width: 100%;height: 100%;" src="/beautifulbeaches/app/asset/image/044.webp" alt="">
-                        </div> -->
                     </div>
                 </div>
                 <!-- section hotel -->
@@ -169,112 +163,139 @@
                 </div>
                 <!-- review -->
                 <div class="details-review">
-                    <div class="details-review-container">
-                        <div class="details-review-left">
-                            <p style="font-size: 30px;font-weight: bolder;">Ratings & Reviews</p>
-                            <div class="details-review-rating">
-                                <div class="details-rating-left">
-                                    <p style="font-size: 90px;font-weight: bolder;color: gray;">4.6</p>
-                                    <p style="font-size: 20px;color: gray;font-weight: bolder;">Out of 5</p>
-                                </div>
-                                <div class="details-rating-right">
-                                    <div class="details-rating-star">
-                                        <div style="width: 100%;display: flex;">
-                                            <span style="width: 50%; text-align: right;">
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                            </span>
-                                            <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">45%</p>
-                                        </div>
-                                        <div style="width: 100%;display: flex;">
-                                            <span style="width: 50%; text-align: right;">
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                            </span>
-                                            <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">16%</p>
-                                        </div>
-                                        <div style="width: 100%;display: flex;">
-                                            <span style="width: 50%; text-align: right;">
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                            </span>
-                                            <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">3%</p>
-                                        </div>
-                                        <div style="width: 100%;display: flex;">
-                                            <span style="width: 50%; text-align: right;">
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                            </span>
-                                            <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">6%</p>
-                                        </div>
-                                        <div style="width: 100%;display: flex;">
-                                            <span style="width: 50%; text-align: right;">
-                                                <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
-                                            </span>
-                                            <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">0%</p>
-                                        </div>
+                <div class="details-review-container">
+                    <div class="details-review-left">
+                        <p style="font-size: 30px;font-weight: bolder;">Ratings & Reviews</p>
+                        <div class="details-review-rating">
+                            <div class="details-rating-left">
+                                <p style="font-size: 90px;font-weight: bolder;color: gray;">4.6</p>
+                                <p style="font-size: 20px;color: gray;font-weight: bolder;">Out of 5</p>
+                            </div>
+                            <div class="details-rating-right">
+                                <div class="details-rating-star">
+                                    <div style="width: 100%;display: flex;">
+                                        <span style="width: 50%; text-align: right;">
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">45%</p>
                                     </div>
-                                    <p style="width: 100%;color: gray;margin-top: 5px;font-weight: bolder;">4,327 Ratings</p>
+                                    <div style="width: 100%;display: flex;">
+                                        <span style="width: 50%; text-align: right;">
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">16%</p>
+                                    </div>
+                                    <div style="width: 100%;display: flex;">
+                                        <span style="width: 50%; text-align: right;">
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">3%</p>
+                                    </div>
+                                    <div style="width: 100%;display: flex;">
+                                        <span style="width: 50%; text-align: right;">
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">6%</p>
+                                    </div>
+                                    <div style="width: 100%;display: flex;">
+                                        <span style="width: 50%; text-align: right;">
+                                            <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">0%</p>
+                                    </div>
                                 </div>
+                                <p style="width: 100%;color: gray;margin-top: 5px;font-weight: bolder;text-align: right;">4,327 Ratings</p>
                             </div>
                         </div>
-                        <div class="details-review-right">
-                            <p style="width: 100%;font-size: 30px;font-weight: bolder;text-align: right;">See All</p>
-                            <div class="details-review-comment">
-                                <div style="width: 30%;padding: 15px 0;align-content: end;text-align: center;">
-                                    <button class="review-button" onclick="openReviewForm(), on()">Write a Review</button>
+                        <div style="text-align: right;">
+                            <button class="review-button" onclick="openReviewForm(), on()">Add to Review</button>
+                        </div>
+                    </div>
+                    <div class="details-review-right">
+                        <button class="details-seeall-review" onclick="openReviewComment(), on()">See All</button>
+                        <div class="details-review-comment">
+                            <div style="width: 100%;text-align: right;">
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
                                 </div>
-                                <div style="width: 70%;text-align: right;">
-                                    <div class="details-review-object">
-                                        <span>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                        </span>
-                                        <p>I love her very much but she doesn't love me, How sad!</p>
-                                    </div>
-                                    <div class="details-review-object">
-                                        <span>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                        </span>
-                                        <p>I love her very much but she doesn't love me, How sad!</p>
-                                    </div>
-                                    <div class="details-review-object">
-                                        <span>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                            <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
-                                        </span>
-                                        <p>I love her very much but she doesn't love me, How sad!</p>
-                                    </div>
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                                </div>
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </main>
 
+        <div id="openreviewcomment">
+        <button class="close-button" onclick="closeReviewComment(), off()">×</button>
+        <h2>Comment All</h2>
+        <div class="details-review-comment">
+            <div style="width: 100%;text-align: right;">
+                <div class="details-review-object">
+                    <span>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                    </span>
+                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
         <!-- Review form container -->
         <div class="review-form-container" id="reviewForm">
-            <button class="close-button" onclick="closeReviewForm(), off()">×</button>
-            <h2>Write a review / comment</h2>
-            <p>* Required fields</p>
-            <p>Rating (out of 5)*:</p>
+        <button class="close-button" onclick="closeReviewForm(), off()">×</button>
+        <h2>Write a review / comment</h2>
+        <p>* Required fields</p>
+        <p>Rating (out of 5)*:</p>
+        <p>Just give a star rating or feel free to add a comment too...</p>
+        <?php ?>
+        <form action="http://localhost/beautifulbeaches/details/saveReview?id=<?= $beach['id'] ?>" method="POST">
             <!-- Star rating -->
             <span class="star-rating" id="starRating">
                 <span class="star" data-value="1">★</span>
@@ -282,18 +303,17 @@
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
-            </span>
-            <p>Just give a star rating or feel free to add a comment too...</p>
-            <form>
-                <label for="name">Your name (optional):</label><br>
-                <input style="width: 100%;height: 50px;font-size: 20px;" type="text" id="name" name="name"><br><br>
-                <label for="comments">Review comments (optional):</label>
-                <textarea style="width: 100%;height: 200px;font-size: 20px;" id="comments" name="comments"></textarea><br><br>
-                <button type="submit">Submit rating</button>
-            </form>
+            </span><br>
+            <input type="hidden" id="starValue" name="starValue">
+            <label for="name">Your name (optional):</label><br>
+            <input class="name-form-review" type="text" id="name" name="name"><br><br>
+            <label for="comments">Review comments (optional):</label>
+            <textarea class="comment-form-review" id="comments" name="comments"></textarea><br><br>
+            <button onclick="closeReviewForm(), off()" class="rating-form-btn-submit" type="submit">
+                Submit
+            </button>
+        </form>
         </div>
-
-
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>

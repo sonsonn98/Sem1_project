@@ -93,7 +93,6 @@
 
 .details-beach-tilte {
     font-weight: bolder;
-    margin-bottom: 10px;
 }
 
 .details-beach-text {
@@ -325,7 +324,7 @@
 .details-rating-right {
     width: 50%;
     height: auto;
-    padding: 15px 35px;
+    padding: 15px 0;
 }
 
 .details-rating-star {
@@ -341,6 +340,7 @@
 .details-review-right {
     width: 50%;
     height: 260px;
+    text-align: right;
 }
 
 .details-review-comment {
@@ -351,6 +351,34 @@
 
 .details-review-object {
     padding: 10px 0;
+}
+
+.details-seeall-review {
+    border: none;
+    background-color: #fff;
+    color: gray;
+    text-decoration: underline;
+    padding: 5px 0;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: right;
+    cursor: pointer;
+}
+
+#openreviewcomment {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 9999;
 }
 
 

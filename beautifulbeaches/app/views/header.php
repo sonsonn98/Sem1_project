@@ -6,14 +6,19 @@
 ?>
 <header id="scrollHeader">
     <nav class="header">
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="menu">
             <li class="menu-item dropdown">
                 <a href="#" class="menu-link">THE LISTS</a>
                 <div class="submenu">
                     <ul class="submenu-list">
-                            <?php foreach ($zones as $zone): ?>
-                                <li><a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="menu-link"><?= $zone['zone_name']; ?></a></li>
-                            <?php endforeach; ?>
+                        <?php foreach ($zones as $zone): ?>
+                            <li><a href="/beautifulbeaches/toplist/index?id=<?= $zone['zone_id']; ?>" class="menu-link"><?= $zone['zone_name']; ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </li>
@@ -41,5 +46,11 @@
         </ul>
     </nav>
 </header>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('mobile-menu');
+    });
+</script>
 </body>
 </html>

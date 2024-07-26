@@ -26,6 +26,21 @@ class DetailsController extends BaseController {
             foreach ($infos as &$info) {
                 $info['more_info_content'] = str_replace('{beach_name}', $beach['name'], $info['more_info_content']);
             }
+            foreach ($weathers as &$weather) {
+                $weather['month'] = str_replace('12', 'DECEMBER', $weather['month'],);
+                $weather['month'] = str_replace('11', 'NOVEMBER', $weather['month']);
+                $weather['month'] = str_replace('10', 'OCTOBER', $weather['month']);
+                $weather['month'] = str_replace('9', 'SEPTEMBER', $weather['month']);
+                $weather['month'] = str_replace('8', 'AUGUST', $weather['month']);
+                $weather['month'] = str_replace('7', 'JULY', $weather['month']);
+                $weather['month'] = str_replace('6', 'JUNE', $weather['month']);
+                $weather['month'] = str_replace('5', 'MAY', $weather['month']);
+                $weather['month'] = str_replace('4', 'APRIL', $weather['month']);
+                $weather['month'] = str_replace('3', 'MARCH', $weather['month']);
+                $weather['month'] = str_replace('2', 'FEBRUARY', $weather['month']);
+                $weather['month'] = str_replace('1', 'JANUARY', $weather['month']);
+                
+            }
 
             $this->view("layout", [
                 "content" => "details",

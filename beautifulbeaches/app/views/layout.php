@@ -49,6 +49,7 @@
 
     <script src="/beautifulbeaches/app/asset/scrollHeader.js"></script>
     <script src="/beautifulbeaches/app/asset/ticker.js"></script>
+    <script src="http://localhost/beautifulbeaches/app/asset/details.js"></script>
 </body>
 
 </html>
