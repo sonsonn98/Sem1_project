@@ -2,6 +2,7 @@
 class DetailsModel
 {
     private $__conn;
+
     public function __construct($conn)
     {
         $this->__conn = $conn;
@@ -11,7 +12,7 @@ class DetailsModel
     {
         try {
             $sql = "INSERT INTO beach_review (`rating`, `beach_id`, `reviewer_name`, `review_comments`) 
-            VALUES (:rating, :beach_id, :reviewer_name, :review_comments)";
+                    VALUES (:rating, :beach_id, :reviewer_name, :review_comments)";
             $stmt = $this->__conn->prepare($sql);
             $stmt->bindParam(":rating", $starValue, PDO::PARAM_INT);
             $stmt->bindParam(":beach_id", $beache_id, PDO::PARAM_INT);
@@ -27,12 +28,26 @@ class DetailsModel
     public function getAllReviews()
     {
         try {
-            $sql = "select * from beache_review";
+            $sql = "SELECT * FROM beach_review";
             $stmt = $this->__conn->prepare($sql);
-            $reviews = $stmt->execute();
-            return $reviews;
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "error" . $e->getMessage();
+        }
+    }
+
+    public function getBeachDetails($beach_id)
+    {
+        try {
+            $sql = "SELECT * FROM beaches WHERE id = :beach_id";
+            $stmt = $this->__conn->prepare($sql);
+            $stmt->bindParam(":beach_id", $beach_id, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "error" . $e->getMessage();
         }
     }
 }
+?>
