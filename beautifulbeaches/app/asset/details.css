@@ -328,7 +328,8 @@
 }
 
 .details-rating-star {
-    width: 100%;
+    width: 185px;
+    height: 95px;
 }
 
 .details-review-rating {
@@ -344,9 +345,12 @@
 }
 
 .details-review-comment {
-    padding: 15px 0;
+    width: 100%;
+    max-height: 500px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
+    overflow-y: auto;
 }
 
 .details-review-object {
@@ -372,16 +376,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 20px;
+    padding: 20px 0;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 650px;
-    max-height: 500px;
-    overflow-y: auto;
+    max-height: 100%;
     z-index: 9999;
 }
 
 .rating-crossbar {
+    border: 1px solid gray;
     margin-left: 5px;
     height: 50%;
     width: 45%;

@@ -10,7 +10,7 @@
     $traits = $data['traits'];
     $infos = $data['infos'];
     $weathers = $data['weathers'];
-    
+
     $beach_id = $data['beach_id'];
     $reviews = $data['reviews'];
     $totalReviews = $data['totalReviews'];
@@ -21,7 +21,7 @@
     $persent4Star = $data['persent4Star'];
     $persent5Star = $data['persent5Star'];
     ?>
-    <div id="details-overlay" onclick="off()"></div>
+    <div id="details-overlay" onclick="closeReviewForm(), closeReviewComment(), off()"></div>
     <div class="c-12 details-container-img">
         <!-- big img beach -->
         <img class=" details-big-img" src="<?= $image['picture_link'] ?>" alt="">
@@ -186,8 +186,8 @@
                             </div>
                             <div class="details-rating-right">
                                 <div class="details-rating-star">
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;">
-                                        <span style="width: 50%;height: 100%;text-align:right;">
+                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                        <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
@@ -195,45 +195,45 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent5Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent5Star?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;">
-                                        <span style="width: 50%;height: 100%;text-align:right;">
+                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                        <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent4Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent4Star?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;">
-                                        <span style="width: 50%;height: 100%;text-align:right;">
+                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                        <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent3Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent3Star?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;">
-                                        <span style="width: 50%;height: 100%;text-align:right;">
+                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                        <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent2Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent2Star?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;">
-                                        <span style="width: 50%;height: 100%;text-align:right;">
+                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                        <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent1Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent1Star?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
                                 </div>

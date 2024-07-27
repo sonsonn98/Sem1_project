@@ -44,7 +44,6 @@ class DetailsController extends BaseController
                 $weather['month'] = str_replace('2', 'FEBRUARY', $weather['month']);
                 $weather['month'] = str_replace('1', 'JANUARY', $weather['month']);
 
-
                 $totalReviews = 0;
                 $averageRating = 0;
                 $persent1Star = 0;
@@ -52,7 +51,6 @@ class DetailsController extends BaseController
                 $persent3Star = 0;
                 $persent4Star = 0;
                 $persent5Star = 0;
-
                 if (!empty($reviews)) {
                     $num1Star = 0;
                     $num2Star = 0;
