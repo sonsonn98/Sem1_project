@@ -1,0 +1,224 @@
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 20;
+  min-height: 81px;
+}
+
+#scrollHeader.scrolled {
+  max-width: 100%;
+  width: 100%;
+  color: black !important;
+  background-color: rgba(252, 245, 239, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#scrollHeader.scrolled .menu .menu-item .menu-link {
+  color: black;
+}
+
+#scrollHeader.scrolled .menu .menu-item .submenu .submenu-list {
+  background-color: rgba(252, 245, 239, 0.6);
+  width: 70px;
+}
+
+.header {
+  max-width: 1000px;
+  width: 100%;
+  z-index: 20;
+}
+
+.header-text {
+  text-transform: uppercase;
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-text p {
+  display: block;
+  font-weight: 400;
+  font-size: 40px;
+  animation: fadeInLeft 0.6s ease-in;
+  font-family: "Playwrite CU", cursive;
+}
+
+.header-text img {
+  animation: fadeInRight 0.6s ease-in;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInTop 0.6s ease-in;
+}
+
+.menu .dropdown {
+  position: relative;
+}
+
+.dropdown:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateX(0);
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-link {
+  font-size: 12.5px;
+  line-height: 1.2;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-underline-offset: 4px;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.submenu {
+  min-width: 170px;
+  position: absolute;
+  left: -8px;
+  z-index: 5;
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
+  transition: 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  background: none;
+  top: 100%;
+  padding-top: 18px;
+}
+
+.submenu ul {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: -5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.submenu li {
+  position: relative;
+  text-transform: uppercase;
+}
+
+@keyframes fadeInTop {
+  from {
+      opacity: 0;
+      transform: translate3d(0, -80%, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+  80% {
+      transform: translateX(-1rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+  80% {
+      transform: translateX(1rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@media (max-width: 740px) {
+  .menu {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 100;
+  }
+
+  .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: white;
+  }
+
+  .menu.mobile-menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba(252, 245, 239, 0.7);
+      padding-top: 50px;
+      animation: slideIn 0.5s forwards;
+  }
+
+  .menu-item {
+      text-align: right;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      .submenu {
+        text-align: center;
+      }
+  }
+
+  .menu-link {
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+  }
+
+  .menu-link:hover {
+      text-decoration: underline;
+  }
+
+  @keyframes slideIn {
+      from {
+          transform: translateX(100%);
+      }
+      to {
+          transform: translateX(0);
+      }
+  }
+}
