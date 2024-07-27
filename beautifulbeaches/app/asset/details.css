@@ -381,6 +381,16 @@
     z-index: 9999;
 }
 
+.rating-crossbar {
+    margin-left: 5px;
+    height: 50%;
+    width: 45%;
+}
+
+#crossbar-persent {
+    height: 100%;
+    background-color: gray;
+}
 
 /* responsive */
 @media (max-width: 1024px) {
