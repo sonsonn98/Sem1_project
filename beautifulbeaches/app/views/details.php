@@ -2,7 +2,7 @@
 <html lang="en">
 
 <body>
-<?php $beach = $data['beach'];
+    <?php $beach = $data['beach'];
         $image = $data['image'][0]; 
         $map = $data['map'][0];
         $slideimgs = $data['slideimgs'];
@@ -11,10 +11,12 @@
         $infos = $data['infos'];
         $weathers = $data['weathers'];
     ?>
-    <div id="details-overlay" onclick="closeReviewForm(), closeReviewComment(), off()"></div>
+    <div id="details-overlay" onclick="off()"></div>
         <div class="c-12 details-container-img">
+            <!-- big img beach -->
             <img class=" details-big-img" src="<?= $image['picture_link'] ?>" alt="">
         </div>
+
 
         <main class="details-main">
             <!-- beach info -->
@@ -26,6 +28,8 @@
                     <p class="details-beach-icon">
                         <img style="width: 35px;" src="/beautifulbeaches/app/asset/image/icon.png" alt="">
                     </p>
+                    <!-- <p class="header-p" style="font-style: italic;-webkit-text-stroke: 0.01px rgb(225, 225, 225);">#4 in the
+                        world</p> -->
                 </div>
 
                 <!-- section beach -->
@@ -56,6 +60,26 @@
                             </div>
                         </div>
                         <?php endforeach; ?>
+                        <!-- <div class="details-pluses-item">
+                            <div class="details-pluses-img">
+                                <img class="details-img" src="/beautifulbeaches/app/asset/image/f3.webp" alt="">
+                            </div>
+                            <div class="details-pluses-info">
+                                <p class="details-pluses-title">UNTOUCHED</p>
+                                <p class="details-pluses-text">Entalula Beach is very far off the beaten path and is in a
+                                    pristine state.</p>
+                            </div>
+                        </div>
+                        <div class="details-pluses-item">
+                            <div class="details-pluses-img">
+                                <img class="details-img" src="/beautifulbeaches/app/asset/image/f7.webp" alt="">
+                            </div>
+                            <div class="details-pluses-info">
+                                <p class="details-pluses-title">NOT TOO CROWDED</p>
+                                <p class="details-pluses-text">Entalula Beach is never too crowded, making it very peaceful.
+                                </p>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- section images -->
@@ -70,6 +94,17 @@
                 </div>
                 <!-- section hotel -->
                 <div class="details-hotel">
+                    <div class="details-hotel-container">
+                        <div class="details-hotel-title">
+                            <p class="details-quote-later">
+                                <span>V</span>
+                                "Visiting Entatula Beach is like stepping into a real-life postcard. Imagine white sands and
+                                crystal-clear turquoise water framed by lush palm trees and towering limestone cliffs. It's
+                                a true paradise!"
+                            </p>
+                            <P>- <a style="color: #000;" href="">Madeleine, Simply Madeleine</a></P>
+                        </div>
+                    </div>
                     <div class="details-img-bg">
                         <img style="width: 100%;height: 100%;object-fit: cover;" src="<?= $middleimg['picture_link'] ?>" alt="">
                     </div>
@@ -146,9 +181,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
-                                        <div class="rating-crossbar">
-                                            <p style="height:100%;" id="crossbar-persent"></p>
-                                        </div>
+                                        <p style="margin-left: 15px;color: gray;font-weight: bold;font-size: 12.5px;">45%</p>
                                     </div>
                                     <div style="width: 100%;display: flex;">
                                         <span style="width: 50%; text-align: right;">
@@ -192,28 +225,44 @@
                         <button class="details-seeall-review" onclick="openReviewComment(), on()">See All</button>
                         <div class="details-review-comment">
                             <div style="width: 100%;text-align: right;">
-                                <?php if (!empty($data["reviews"])) : ?>
-                                    <?php $reviews = $data["reviews"];?>
-                                    <?php $item = array_slice($reviews, 0, 3)?>
-                                    <?php foreach ($item as $review) : ?>
-                                        <div class="details-review-object">
-                                            <span>
-                                                <?php for($i = 1; $i <= $review['rating']; $i++) {
-                                                    echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
-                                                }?>
-                                                <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
-                                            </span>
-                                            <p style="margin-top: 5px;"><?= $review["review_comments"] ?></p>
-                                        </div>
-                                    <?php endforeach; ?>
-                                <?php else : ?>
-                                    <p>No Comment!</p>
-                                <?php endif; ?>
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                                </div>
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                                </div>
+                                <div class="details-review-object">
+                                    <span>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                                    </span>
+                                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
             </div>
         </main>
 
@@ -223,37 +272,29 @@
         <h2>Comment All</h2>
         <div class="details-review-comment">
             <div style="width: 100%;text-align: right;">
-                <?php if (!empty($data["reviews"])) : ?>
-                    <?php $reviews = $data["reviews"]; ?>
-                    
-                    <?php foreach ($reviews as $review) : ?>
-                                        <div class="details-review-object">
-                                            <span>
-                                                <?php for($i = 1; $i <= $review['rating']; $i++) {
-                                                    echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
-                                                }?>
-                                                <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
-                                            </span>
-                                            <p style="margin-top: 5px;"><?= $review["review_comments"] ?></p>
-                                        </div>
-                                    <?php endforeach; ?>
-                <?php else : ?>
-                    <p>No Comment!</p>
-                <?php endif; ?>
+                <div class="details-review-object">
+                    <span>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <i style="font-size: 10px;color: orange;" class="fa-solid fa-star"></i>
+                        <span style="margin-left: 5px;font-weight: bold;">name</span>
+                    </span>
+                    <p style="margin-top: 5px;">I love her very much but she doesn't love me, How sad!</p>
+                </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- Review form container -->
-    <div class="review-form-container" id="reviewForm">
+        <!-- Review form container -->
+        <div class="review-form-container" id="reviewForm">
         <button class="close-button" onclick="closeReviewForm(), off()">×</button>
         <h2>Write a review / comment</h2>
         <p>* Required fields</p>
         <p>Rating (out of 5)*:</p>
         <p>Just give a star rating or feel free to add a comment too...</p>
         <?php ?>
-        <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach['id'] ?>" method="POST">
+        <form action="http://localhost/beautifulbeaches/details/saveReview?id=<?= $beach['id'] ?>" method="POST">
             <!-- Star rating -->
             <span class="star-rating" id="starRating">
                 <span class="star" data-value="1">★</span>
@@ -271,7 +312,7 @@
                 Submit
             </button>
         </form>
-    </div>
+        </div>
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>

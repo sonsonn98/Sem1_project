@@ -18,6 +18,10 @@
     cursor: pointer;
 }
 
+/* .details-body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.10rem;
+} */
 
 .details-padding {
     width: 100%;
@@ -377,10 +381,6 @@
     z-index: 9999;
 }
 
-.rating-crossbar {
-    border: 1px solid gray;
-    
-}
 
 /* responsive */
 @media (max-width: 1024px) {

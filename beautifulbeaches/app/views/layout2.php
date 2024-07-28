@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/header2.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/maincontent.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/slide.css" />
+    <link rel="stylesheet" href="/beautifulbeaches/app/asset/ticker.css">
   
     <title></title>
     </head>
@@ -44,5 +45,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/beautifulbeaches/app/asset/scrollHeader.js"></script>
+    <script src="/beautifulbeaches/app/asset/ticker.js"></script>
 </body>
 </html>

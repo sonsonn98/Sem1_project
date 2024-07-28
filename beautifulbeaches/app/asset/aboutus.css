@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.container-2 {
+    margin-top: 150px;
+}
+
 .story__title {
     font-family: 'Georgia', serif;
     font-size: 2rem;

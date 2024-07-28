@@ -115,9 +115,13 @@
               </div>
             </div>
           </div>
-          <div class="footer-copy">Copyright The World’s Best Inc, 2024.</div>
+          <div class="footer-copy">&#169 Copyright The World’s Best Inc, 2024.</div>
         </div>
       </div>
     </footer>
+
+    <div class="ticker" id="ticker">
+      <span id="tickerContent">...</span>
+    </div>
 </body>
 </html>
