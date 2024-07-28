@@ -83,7 +83,7 @@
               <div class="ad-media">
                 <div class="ad">
                   <i class="fa-solid fa-question ad-icon"></i>
-                  <a class="ad-link" href="">10 Practical Beach Safety Tips</a>
+                  <a class="ad-link" href="https://www.onlinesafetytrainer.com/10-practical-beach-safety-tips/">10 Practical Beach Safety Tips</a>
                 </div>
                 <div class="ad">
                   <i class="fa-solid fa-question ad-icon"></i>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="ad">
                   <i class="fa-solid fa-question ad-icon"></i>
-                  <a class="ad-link" href="">What You Should Know About Surfing And Diving</a>
+                  <a class="ad-link" href="https://www.lapointcamps.com/blog/top-10-things-to-know-when-you-start-surfing/">What You Should Know About Surfing And Diving</a>
                 </div>
               </div>
             </div>
