@@ -1,10 +1,13 @@
 /* Style for the button */
 button.review-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    margin-top: 20px;
+    background-color: #faf9f7;
+    color: gray;
+    font-size: 17px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* Style for the form */
@@ -52,8 +55,6 @@ span.star-rating span.star {
 span.star-rating span.star.filled {
     color: gold;
 }
-<<<<<<< HEAD
-=======
 
 .name-form-review {
     width: 100%;
@@ -75,4 +76,3 @@ span.star-rating span.star.filled {
     font-weight: bolder;
     font-size: 20px;
 }
->>>>>>> 5ab2f980d99704cd912ebc843838a6a27e49e28d

@@ -45,8 +45,11 @@
             </li>
         </ul>
     </nav>
-</header>
 
+    <a href="/beautifulbeaches/home/index" class="subhome">
+        <img id="logo2" width="250" src="/beautifulbeaches/app/asset/image/sublogo.png" alt="Sub Logo" />
+    </a>
+</header>
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('.menu').classList.toggle('mobile-menu');

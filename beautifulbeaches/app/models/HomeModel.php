@@ -6,12 +6,14 @@ class HomeModel {
     }
     public function getAllZones() {
         try {
+            if(isset($this->__conn)){
                 $sql = "Select * from zones";
                 $stmt = $this->__conn->prepare($sql);
                 $stmt -> execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 return $result;
-        } catch(PDOException $e){
+            }
+        }catch(PDOException $e){
             echo "".$e->getMessage();
         } 
     }
