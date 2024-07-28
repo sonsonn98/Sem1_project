@@ -45,11 +45,10 @@
       src="https://kit.fontawesome.com/3687ed1fbf.js"
       crossorigin="anonymous"
     ></script>
-    
 
     <script src="/beautifulbeaches/app/asset/scrollHeader.js"></script>
     <script src="/beautifulbeaches/app/asset/ticker.js"></script>
-    <script src="http://localhost/beautifulbeaches/app/asset/details.js"></script>
+
 </body>
 
 </html>

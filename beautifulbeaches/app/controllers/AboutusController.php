@@ -11,7 +11,7 @@ class AboutusController extends BaseController {
     // action
     public function index(){
         $zones = $this->__homeModel->getAllZones();
-        $this->view("layout2", ["content" => "aboutus","zones"=>$zones]);
+        $this->view("layout", ["content" => "aboutus","zones"=>$zones]);
     }
 
 

@@ -101,6 +101,7 @@ section {
   color: black;
   text-align: center;
   font-weight: 400;
+  z-index: 9999;
   -webkit-transform: matrix(0, -1, 1, 0, 0, 0);
 }
 
@@ -190,5 +191,30 @@ section {
   text-decoration: none;
   &:hover {
     text-decoration: underline !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+.label {
+  -webkit-transform: none;
+  position: relative;
+  top: -100px;
+  text-align: right;
+  right: 0px;
+}
+
+  .aboutus {
+    text-align: center;
+  }
+
+  .aboutus-img {
+    position: relative;
+    width: 100%;
+    right: 0px;
+  }
+  .aboutus-item {
+    margin: auto;
+    margin-top: -80px;
   }
 }

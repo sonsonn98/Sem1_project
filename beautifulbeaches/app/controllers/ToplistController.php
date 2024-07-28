@@ -18,6 +18,7 @@ class ToplistController extends BaseController {
                 $beach['images'] = $this->__toplistModel->getImageSlider($beach['id']);
             }
 
+            
             if ($zone) {
                 $this->view("layout2", ["content" => "toplist", 
                 "zone" => $zone, 
