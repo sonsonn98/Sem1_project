@@ -45,5 +45,12 @@
             </div>
         </div>
     </div>
+    <div id="bannerad">
+        <button type="x" class="ad button" onclick="closebannerad()">x</button>
+
+        <a href="https://www.vemaybay.vn/">
+            <img src="https://img.pikbest.com/origin/06/01/50/24xpIkbEsT4Rf.jpg!f305cw" alt="Banner Ad"></a>
+    </div>
+    <script src="http://localhost/beautifulbeaches/app/asset/contactus.js"></script>
 </body>
 </html>
