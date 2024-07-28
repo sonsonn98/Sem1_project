@@ -21,11 +21,9 @@ class App{
 
     public function handleUrl(){
         $path = $this->getPath();
-        // turn path string into array
         $patharr=explode('/',$path);
         unset($patharr[0]);
         $patharr = array_values($patharr);
-        //handle controller
         if(!empty($patharr[0])){
             $this->controller = $patharr[0];
             $this->controllerpath = ucfirst($patharr[0])."Controller";
@@ -35,14 +33,14 @@ class App{
         if(file_exists("app/controllers/".$this->controllerpath.".php")){
             require_once "app/controllers/".$this->controllerpath.".php";
             if(class_exists($this->controllerpath)){
-                $this->controllerpath = new $this->controllerpath($this->conn);  // tạo controller object
+                $this->controllerpath = new $this->controllerpath($this->conn);  
         }
             unset($patharr[0]);
             $patharr = array_values($patharr);
         } else {
             $this-> handleError(404) ;
             }
-         //handle action
+        
         if(!empty($patharr[0])){
             $this->action = $patharr[0];
             unset($patharr[0]);

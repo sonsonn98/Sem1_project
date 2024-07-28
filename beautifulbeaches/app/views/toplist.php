@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php $beaches = $data['beaches'];
-        ?>
+  <?php $beaches = $data['beaches']; ?>
   <body>
   <main class="main-content">
   <section class="section-destination">
@@ -12,21 +11,20 @@
       </h3>
       <section class="section-gallery">
         <div class="search-container">
-          <input type="text" id="search-input" placeholder="Search...">
-          <button id="clear-btn"><i class="fa-solid fa-xmark"></i></button>
-          <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-          
+          <form action="/beautifulbeaches/toplist/index" method="get">
+            <input type="hidden" name="id" value="<?= $data['zone']['zone_id'] ?>">
+            <input type="text" name="search" id="search-input" placeholder="Search..." value="<?= $data['search'] ?>">
+            <button id="clear-btn" type="button" onclick="document.getElementById('search-input').value=''; this.form.submit();"><i class="fa-solid fa-xmark"></i></button>
+            <button id="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
         </div>
         <div class="gallery-container">
           <div class="gallery row">
           <?php foreach ($beaches as $beach): ?>
             <div class="l-5-6 m-12 c-12 gallery-item">
-              
               <div class="slider">
                 <div class="slideshow-container" id="slideshow<?= $beach['id'] ?>">
                   <?php foreach ($beach['images'] as $image): ?>
-
-                    
                   <div class="mySlides fade">
                       <img src="<?= $image['picture_link'] ?>" style="width:100%">
                   </div>
@@ -41,7 +39,6 @@
                 </div>
               </div>
               <div class="slider-info">
-                
                 <div class="slider-titles">
                   <div class="slider-title"><?= $beach['name'] ?></div>
                   <div class="slider-text"><?= $beach['country_name'] ?></div>
@@ -50,16 +47,20 @@
               </div>
             </div>
             <?php endforeach; ?>
-            
           </div>
+        </div>
+        <div class="pagination">
+          <?php for ($i = 1; $i <= $data['totalPages']; $i++): ?>
+            <a href="/beautifulbeaches/toplist/index?id=<?= $data['zone']['zone_id'] ?>&page=<?= $i ?>&search=<?= urlencode($data['search']) ?>" class="<?= $i == $data['currentPage'] ? 'active' : '' ?>"><?= $i ?></a>
+          <?php endfor; ?>
         </div>
       </section>
     </div>
   </section>
 </main>
 
-    <script src="/beautifulbeaches/app/asset/slide.js
-    "></script>
-    <script src="/beautifulbeaches/app/asset/search.js"></script>
+    <script src="/beautifulbeaches/app/asset/slide.js"></script>
+    <!-- <script src="/beautifulbeaches/app/asset/search.js"></script> -->
+     
   </body>
 </html>
