@@ -10,7 +10,6 @@
     $traits = $data['traits'];
     $infos = $data['infos'];
     $weathers = $data['weathers'];
-
     $beach_id = $data['beach_id'];
     $reviews = $data['reviews'];
     $totalReviews = $data['totalReviews'];
@@ -54,6 +53,16 @@
                     <img style="width: 100%;height: 100%;" src="<?= $map['picture_link'] ?>" alt="">
                 </div>
             </div>
+            <!-- section images -->
+            <div class="details-images">
+                <div class="details-images">
+                    <?php foreach ($slideimgs as $slideimg): ?>
+                        <div class="details-images-item">
+                            <img style="width: 100%;height: 100%;" src="<?= $slideimg['picture_link'] ?>" alt="">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
             <!-- section pluses -->
             <div class="details-padding">
                 <div class="details-pluses">
@@ -68,36 +77,6 @@
 
                                 </p>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <!-- <div class="details-pluses-item">
-                            <div class="details-pluses-img">
-                                <img class="details-img" src="/beautifulbeaches/app/asset/image/f3.webp" alt="">
-                            </div>
-                            <div class="details-pluses-info">
-                                <p class="details-pluses-title">UNTOUCHED</p>
-                                <p class="details-pluses-text">Entalula Beach is very far off the beaten path and is in a
-                                    pristine state.</p>
-                            </div>
-                        </div>
-                        <div class="details-pluses-item">
-                            <div class="details-pluses-img">
-                                <img class="details-img" src="/beautifulbeaches/app/asset/image/f7.webp" alt="">
-                            </div>
-                            <div class="details-pluses-info">
-                                <p class="details-pluses-title">NOT TOO CROWDED</p>
-                                <p class="details-pluses-text">Entalula Beach is never too crowded, making it very peaceful.
-                                </p>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-            <!-- section images -->
-            <div class="details-images">
-                <div class="details-images">
-                    <?php foreach ($slideimgs as $slideimg): ?>
-                        <div class="details-images-item">
-                            <img style="width: 100%;height: 100%;" src="<?= $slideimg['picture_link'] ?>" alt="">
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -175,7 +154,8 @@
                             </div>
                             <div class="details-rating-right">
                                 <div class="details-rating-star">
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                    <div
+                                        style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
                                         <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
@@ -184,10 +164,11 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent5Star?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent5Star ?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                    <div
+                                        style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
                                         <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
@@ -195,34 +176,37 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent4Star?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent4Star ?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                    <div
+                                        style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
                                         <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent3Star?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent3Star ?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                    <div
+                                        style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
                                         <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent2Star?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent2Star ?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
-                                    <div style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
+                                    <div
+                                        style="width: 100%;display: flex;height: 19px;align-items: center;padding: 5px 0;">
                                         <span style="width: 50%;text-align:right;">
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent1Star?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $persent1Star ?>%;" id="crossbar-persent"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -239,7 +223,7 @@
                     <div class="details-review-right">
                         <button class="details-seeall-review" onclick="openReviewComment(), on()">See All</button>
                         <div class="details-review-comment">
-                            <div style="width: 100%;text-align: right;">
+                            <div style="width: 100%;text-align: right;padding: 5px;">
                                 <?php if (!empty($reviews)): ?>
                                     <?php $item = array_slice($reviews, 0, 3) ?>
                                     <?php foreach ($item as $review): ?>
@@ -249,7 +233,8 @@
                                                     echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
                                                 } ?>
                                                 <span
-                                                    style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
+                                                    style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?>
+                                                </span>
                                             </span>
                                             <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
                                         </div>
@@ -279,6 +264,8 @@
                                     echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
                                 } ?>
                                 <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
+                                <!-- btn remove and edit comment -->
+                                <!-- <button id="btn">...</button> -->
                             </span>
                             <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
                         </div>

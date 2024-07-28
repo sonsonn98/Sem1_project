@@ -18,6 +18,10 @@
     cursor: pointer;
 }
 
+/* .details-body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.10rem;
+} */
 
 .details-padding {
     width: 100%;
@@ -96,7 +100,7 @@
 }
 
 .details-beach-img {
-    width: 55%;
+    width: 560px;
     height: auto;
 }
 
@@ -111,7 +115,8 @@
 }
 
 .details-pluses-item {
-    width: 30%;
+    width: 33%;
+    height: 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -123,10 +128,8 @@
 
 .details-pluses-info {
     width: 65%;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    height: 100%;
+    position: relative;
 }
 
 .details-pluses-title {
@@ -137,21 +140,16 @@
 }
 
 .details-pluses-text {
-    margin-top: auto;
     font-size: 12.5px;
     line-height: 1.5;
     color: #000;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+    position: absolute;
+    bottom: 0;
 }
 
 .details-images {
     width: 100%;
-    padding: 80px 0;
+    padding-top: 40px;
 }
 
 .details-images {
@@ -203,7 +201,7 @@
 .details-img-bg {
     width: 100%;
     height: 900px;
-    padding: 150px 0;
+    padding: 50px 0;
 }
 
 
@@ -307,7 +305,7 @@
 
 .details-review-left {
     background-color: #faf9f7;
-    width: 35%;
+    width: 45%;
     height: 260px;
     padding: 15px;
 }
@@ -325,6 +323,7 @@
 
 .details-rating-star {
     width: 100%;
+    height: 95px;
 }
 
 .details-review-rating {
@@ -340,9 +339,7 @@
 }
 
 .details-review-comment {
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 
 .details-review-object {
@@ -368,26 +365,118 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 20px;
+    padding: 20px 0;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 650px;
-    max-height: 500px;
-    overflow-y: auto;
+    max-height: 100%;
     z-index: 9999;
-}
+}  
 
 .rating-crossbar {
     border: 1px solid gray;
-    
+    margin-left: 5px;
+    height: 50%;
+    width: 45%;
+}
+
+#crossbar-persent {
+    height: 100%;
+    background-color: gray;
 }
 
 /* responsive */
+@media (max-width: 1224px) {
+    .details-pluses-img {
+        width: 100px;
+        height: 100px;
+    }
+    .details-pluses-title {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 1024px) {
 
     .details-review-left {
-        width: 50%;
+        width: 100%;
+        
+    }
+    .details-review-container {
+        display: block;
+    }
+    .details-review-right {
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
     }
 
+    .details-beach-img {
+        width: 400px;
+        height: 200px;
+    }
+    .details-beach-about {
+        width: 60%;
+    }
 
+    .details-pluses-img {
+        width: 80px;
+        height: 80px;
+    }
+    .details-pluses-info {
+        width: 65%;
+    }
+    
+}
+
+@media(max-width: 940px) {
+    .details-more {
+        display: block;
+    }
+    .details-more-item {
+        width: 100%;
+    }
+    .more-item-right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .details-beach-body {
+        display: block;
+    }
+    .details-beach-about {
+        width: 100%;
+    }
+    .details-beach-img {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .details-pluses {
+        display: block;
+    }
+    .details-pluses-item {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+        justify-content: left;
+    }
+    .details-pluses-img {
+        width: 100px;
+        height: 100px;
+    }
+    .details-pluses-info {
+        width: 70%;
+        height: auto;
+        margin-left: 10px;
+    }
+    .details-pluses-title {
+        font-size: 20px;
+    }
+    .details-hotel-container {
+        padding: 0 40px;
+    }
+    .details-quote-later span {
+        left: 90px;
+    }
 }
