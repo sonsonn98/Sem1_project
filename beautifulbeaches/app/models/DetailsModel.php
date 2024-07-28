@@ -8,9 +8,7 @@ class DetailsModel
     }
     public function getBeachDetail($beach_id) {
         try {
-            $sql = " SELECT b.id, b.name, b.description, c.country_name,
-            b.description_title,b.trait1_id, b.trait2_id, b.trait3_id,
-            b.more_info1_id,b.more_info2_id,b.more_info3_id,b.more_info4_id
+            $sql = " SELECT b.*, c.country_name
                 FROM beaches b
                 JOIN countries c ON b.country_id = c.country_id
                 WHERE b.id = :beach_id";
@@ -116,18 +114,6 @@ public function getAllReviews($beach_id)
     }
 }
 
-public function getBeachDetails($beach_id)
-{
-try {
-    $sql = "SELECT * FROM beaches WHERE id = :beach_id";
-    $stmt = $this->__conn->prepare($sql);
-    $stmt->bindParam(":beach_id", $beach_id, PDO::PARAM_INT);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "error" . $e->getMessage();
-}
-}
 
     
 }
