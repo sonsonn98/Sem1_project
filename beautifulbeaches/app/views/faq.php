@@ -29,7 +29,6 @@
     </div>
 
     <script>
-        // JavaScript to toggle answers
         document.querySelectorAll('.question').forEach((question) => {
             question.addEventListener('click', () => {
                 question.classList.toggle('active');

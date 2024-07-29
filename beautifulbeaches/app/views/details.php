@@ -22,15 +22,11 @@
     ?>
     <div id="details-overlay" onclick="closeReviewForm(), closeReviewComment(), off()"></div>
     <div class="c-12 details-container-img">
-        <!-- big img beach -->
         <img class=" details-big-img" src="<?= $image['picture_link'] ?>" alt="">
     </div>
 
-
     <main class="details-main">
-        <!-- beach info -->
         <div class="details-beach-container">
-            <!-- beach header -->
             <div class="details-beach-header details-padding">
                 <p class="details-header-title header-p"><?= $beach['name'] ?></p>
                 <p class="details-header-subtitle header-p"><?= $beach['country_name'] ?></p>
@@ -274,10 +270,8 @@
                 <?php endif; ?>
             </div>
         </div>
-
     </div>
 
-    <!-- Review form container -->
     <div class="review-form-container" id="reviewForm">
         <button class="close-button" onclick="closeReviewForm(), off()">×</button>
         <h2>Write a review / comment</h2>
@@ -286,7 +280,6 @@
         <p>Just give a star rating or feel free to add a comment too...</p>
         <?php ?>
         <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach_id ?>" method="POST">
-            <!-- Star rating -->
             <span class="star-rating" id="starRating">
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
@@ -305,7 +298,6 @@
         </form>
     </div>
 
-    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3687ed1fbf.js" crossorigin="anonymous"></script>
     <script src="http://localhost/beautifulbeaches/app/asset/details.js"></script>
