@@ -37,8 +37,6 @@
                 <p class="details-beach-icon">
                     <img style="width: 35px;" src="/beautifulbeaches/app/asset/image/icon.png" alt="">
                 </p>
-                <!-- <p class="header-p" style="font-style: italic;-webkit-text-stroke: 0.01px rgb(225, 225, 225);">#4 in the
-                        world</p> -->
             </div>
 
             <!-- section beach -->
@@ -48,6 +46,7 @@
                     <p class="details-beach-text">
                         <?= $beach['description'] ?>
                     </p>
+                    <a href="/beautifulbeaches/details/downloadPDF?id=<?php echo $beach['id']; ?>">Download as PDF</a>
                 </div>
                 <div class="details-beach-img">
                     <img style="width: 100%;height: 100%;" src="<?= $map['picture_link'] ?>" alt="">

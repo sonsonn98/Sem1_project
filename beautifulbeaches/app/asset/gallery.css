@@ -1,5 +1,11 @@
-body {
-    font-family: Arial, sans-serif;
+
+.gallery-container {
+    text-align: center;
+    text-transform: uppercase;
+    p{
+        margin-top: 200px;
+        font-size: 30px;
+    }
 }
 
 .image-grid {

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/maincontent.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/slide.css" />
     <link rel="stylesheet" href="/beautifulbeaches/app/asset/ticker.css">
+    <link rel="stylesheet" href="/beautifulbeaches/app/asset/gallery.css">
   
     <title></title>
     </head>

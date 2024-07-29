@@ -26,7 +26,7 @@
                 <a href="/beautifulbeaches/best/index" class="menu-link">BEST OF THE BEST</a>
             </li>
             <li class="menu-item">
-                <a href="#" class="menu-link">GALLERY</a>
+                <a href="/beautifulbeaches/gallery/index" class="menu-link">GALLERY</a>
             </li>
             <li class="menu-item logo" style="display: <?php echo ($_SERVER['REQUEST_URI'] == "/beautifulbeaches/home/index") ? "none" : "inline"; ?>;">
                 <a href="/beautifulbeaches/home/index">
