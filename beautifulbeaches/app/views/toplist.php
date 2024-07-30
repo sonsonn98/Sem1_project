@@ -50,9 +50,13 @@
           </div>
         </div>
         <div class="pagination">
-          <?php for ($i = 1; $i <= $data['totalPages']; $i++): ?>
-            <a href="/beautifulbeaches/toplist/index?id=<?= $data['zone']['zone_id'] ?>&page=<?= $i ?>&search=<?= urlencode($data['search']) ?>" class="<?= $i == $data['currentPage'] ? 'active' : '' ?>"><?= $i ?></a>
-          <?php endfor; ?>
+          <?php foreach ($data['pagination'] as $page): ?>
+            <?php if ($page === '...'): ?>
+              <span class="dots">...</span>
+            <?php else: ?>
+              <a href="/beautifulbeaches/toplist/index?id=<?= $data['zone']['zone_id'] ?>&page=<?= $page ?>&search=<?= urlencode($data['search']) ?>" class="<?= $page == $data['currentPage'] ? 'active' : '' ?>"><?= $page ?></a>
+            <?php endif; ?>
+          <?php endforeach; ?>
         </div>
       </section>
     </div>
@@ -60,7 +64,6 @@
 </main>
 
     <script src="/beautifulbeaches/app/asset/slide.js"></script>
-    <!-- <script src="/beautifulbeaches/app/asset/search.js"></script> -->
      
   </body>
 </html>

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php $imgs = $data['imgs'];
-            $i = array_slice($imgs, 0 , 40);    
-    ?>
+    <?php $imgs = $data['imgs']; ?>
 <body>
     <div class="gallery-1">
         <p>GALLERY</p>
     <div class="image-grid">
-        <?php foreach($i as $img): ?>
+        <?php foreach($imgs as $img): ?>
         <div class="image-container">
             <figure class="image-figure"> 
                     <img src="<?= $img['picture_link'] ?>" class="image" alt="Image 1">
             </figure>
         </div>
         <?php endforeach; ?>
-        
-        </div>
     </div>
+
+    <div class="pagination">
+        <?php foreach ($data['pagination'] as $page): ?>
+            <?php if ($page === '...'): ?>
+                <span class="dots">...</span>
+            <?php else: ?>
+                <a href="/beautifulbeaches/gallery/index?page=<?= $page ?>" class="<?= $page == $data['currentPage'] ? 'active' : '' ?>"><?= $page ?></a>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
+</div>
 
     <script>
         window.addEventListener('load', function() {

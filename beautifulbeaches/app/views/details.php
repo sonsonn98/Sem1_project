@@ -100,7 +100,7 @@
                                 <?php foreach ($weathers as $weather): ?>
                                     <tr>
 
-                                        <td class="details-table-month"><?= $weather['month'] ?></td>
+                                        <td class="details-table-month"><?= $weather['month_name'] ?></td>
                                         <td>
                                             <span><?= $weather['avg_high'] ?></span>
                                             °
