@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.centered {
+    text-align: center;
+}
+
+.trait-img {
+    width: 120px;
+    height: 120px;
+}
+
+.slide-imgs {
+    width: 50mm;
+}
+
+.details-big-img {
+    width: 150mm;
+    margin: 10px 0;
+}
+
+.header-p {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.details-header-title {
+    font-size: 40px;
+}
+
+/* beach body */
+
+.details-tilte {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* pluses */
+.details-pluses {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.details-pluses-title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.details-pluses-text {
+    font-size: 12.5px;
+}
+
+.details-container-more {
+    page-break-inside: avoid;
+    margin: 40px 0;
+}
+
+.details-more-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #faf9f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.details-more-table {
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.details-more-table tr td {
+    font-size: 12.5px;
+    width: 40mm;
+    text-align: center;
+    height:7mm;
+}
+
+

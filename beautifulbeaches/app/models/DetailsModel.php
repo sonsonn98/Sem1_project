@@ -83,6 +83,23 @@ class DetailsModel
 } 
 
 }
+    public function getFlightsbyid($id) {
+        try{
+            if(isset($this->__conn)){
+                $sql = "select * from beach_flight where id=:id";
+                $stmt = $this->__conn->prepare($sql);
+                $stmt -> bindParam("id", $id, PDO::PARAM_INT);
+                $stmt -> execute();
+                $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+                return $result;
+            }
+        }
+        
+        catch (PDOException $e) {
+            echo "". $e -> getMessage();
+            exit();
+        }
+    }
 
 public function saveReviews($starValue, $beach_id, $name, $comment)
 {

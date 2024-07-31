@@ -23,6 +23,7 @@ class DetailsController extends BaseController
             $traits = $this->__detailsModel->getTraitsByIds($beach['trait1_id'], $beach['trait2_id'], $beach['trait3_id']);
             $infos = $this->__detailsModel->getMoreInfoByIds($beach['more_info1_id'], $beach['more_info2_id'], $beach['more_info3_id'], $beach['more_info4_id']);
             $weathers = $this->__detailsModel->getBeachWeather($beach['id']);
+            $flights = $this->__detailsModel->getFlightsbyid($beach_id); 
             $reviews = $this->__detailsModel->getAllReviews($beach_id);
             foreach ($traits as &$trait) {
                 $trait['trait_description'] = str_replace('{beach_name}', $beach['name'], $trait['trait_description']);
@@ -99,6 +100,7 @@ class DetailsController extends BaseController
                 "traits" => $traits,
                 "infos" => $infos,
                 "weathers" => $weathers,
+                "flights" => $flights,
                 "reviews" => $reviews,
                 "beach_id" => $beach_id,
                 "totalReviews" => $totalReviews,
@@ -123,5 +125,65 @@ class DetailsController extends BaseController
             header("location: http://localhost/beautifulbeaches/details/index?id=$beach_id");
         }
     }
+    public function download($id){
+        // use Mpdf;
+        $pdf = new Mpdf\Mpdf();
+        $html =file_get_contents("http://localhost/beautifulbeaches/details/downloadcontent?id=$id");
+        $pdf->WriteHTML($html);
+        $pdf->Output();
+
+    }
+    public function downloadcontent()
+    {
+        if (isset($_GET['id'])) {
+            $beach_id = intval($_GET['id']);
+            $beach = $this->__detailsModel->getBeachDetail($beach_id);
+            $image = $this->__detailsModel->getBeachImages($beach_id, 'details_bg_img');
+            $map = $this->__detailsModel->getBeachImages($beach_id, 'details_map_img');
+            $slideimgs = $this->__detailsModel->getBeachImages($beach_id, 'details_slides_img');
+            $middleimg = $this->__detailsModel->getBeachImages($beach_id, 'details_middle_img');
+            $traits = $this->__detailsModel->getTraitsByIds($beach['trait1_id'], $beach['trait2_id'], $beach['trait3_id']);
+            $infos = $this->__detailsModel->getMoreInfoByIds($beach['more_info1_id'], $beach['more_info2_id'], $beach['more_info3_id'], $beach['more_info4_id']);
+            $weathers = $this->__detailsModel->getBeachWeather($beach['id']);
+            $flights = $this->__detailsModel->getFlightsbyid($beach_id); 
+            foreach ($traits as &$trait) {
+                $trait['trait_description'] = str_replace('{beach_name}', $beach['name'], $trait['trait_description']);
+            }
+            foreach ($infos as &$info) {
+                $info['more_info_content'] = str_replace('{beach_name}', $beach['name'], $info['more_info_content']);
+            }
+            foreach ($weathers as &$weather) {
+                $weather['month'] = str_replace('12', 'DECEMBER', $weather['month'], );
+                $weather['month'] = str_replace('11', 'NOVEMBER', $weather['month']);
+                $weather['month'] = str_replace('10', 'OCTOBER', $weather['month']);
+                $weather['month'] = str_replace('9', 'SEPTEMBER', $weather['month']);
+                $weather['month'] = str_replace('8', 'AUGUST', $weather['month']);
+                $weather['month'] = str_replace('7', 'JULY', $weather['month']);
+                $weather['month'] = str_replace('6', 'JUNE', $weather['month']);
+                $weather['month'] = str_replace('5', 'MAY', $weather['month']);
+                $weather['month'] = str_replace('4', 'APRIL', $weather['month']);
+                $weather['month'] = str_replace('3', 'MARCH', $weather['month']);
+                $weather['month'] = str_replace('2', 'FEBRUARY', $weather['month']);
+                $weather['month'] = str_replace('1', 'JANUARY', $weather['month']);
+
+            }
+
+            $this->view("layoutprint", [
+                "content" => "downloadcontent",
+                "beach" => $beach,
+                "image" => $image,
+                "map" => $map,
+                "slideimgs" => $slideimgs,
+                "middleimg" => $middleimg,
+                "traits" => $traits,
+                "infos" => $infos,
+                "weathers" => $weathers,
+                "flights" => $flights,
+                "beach_id" => $beach_id
+            ]);
+
+        }
+    }
+
 }
 ?>

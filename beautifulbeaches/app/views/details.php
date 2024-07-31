@@ -10,6 +10,7 @@
     $traits = $data['traits'];
     $infos = $data['infos'];
     $weathers = $data['weathers'];
+    $flights = $data['flights'];
     $beach_id = $data['beach_id'];
     $reviews = $data['reviews'];
     $totalReviews = $data['totalReviews'];
@@ -247,64 +248,99 @@
                     </div>
                 </div>
             </div>
+            <!-- ReviewAll -->
+            <div id="openreviewcomment">
+                <button class="close-button" onclick="closeReviewComment(), off()">×</button>
+                <h2>Comment All</h2>
+                <div class="details-review-comment">
+                    <div style="width: 100%;text-align: right;">
+                        <?php if (!empty($reviews)): ?>
+                            <?php foreach ($reviews as $review): ?>
+                                <div class="details-review-object">
+                                    <span>
+                                        <?php for ($i = 1; $i <= $review['rating']; $i++) {
+                                            echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
+                                        } ?>
+                                        <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
+                                        <!-- btn remove and edit comment -->
+                                        <!-- <button id="btn">...</button> -->
+                                    </span>
+                                    <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>No Comment!</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <!-- Review form container -->
+            <div class="review-form-container" id="reviewForm">
+                <button class="close-button" onclick="closeReviewForm(), off()">×</button>
+                <h2>Write a review / comment</h2>
+                <p>* Required fields</p>
+                <p>Rating (out of 5)*:</p>
+                <p>Just give a star rating or feel free to add a comment too...</p>
+                <?php ?>
+                <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach_id ?>" method="POST">
+                    <!-- Star rating -->
+                    <span class="star-rating" id="starRating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </span><br>
+                    <input type="hidden" id="starValue" name="starValue">
+                    <label for="name">Your name (optional):</label><br>
+                    <input class="name-form-review" type="text" id="name" name="name"><br><br>
+                    <label for="comments">Review comments (optional):</label>
+                    <textarea class="comment-form-review" id="comments" name="comments"></textarea><br><br>
+                    <button onclick="closeReviewForm(), off()" class="rating-form-btn-submit" type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
+            <!-- Flight information section-->
+            <div class="details-container-more">
+                <div class="details-more">
+                    <div class="details-more-item more-item-right"  style="width:100%">
+                            <div class="details-right-info">
+                            <p class="details-more-title">FLIGHTS TO <?= $beach['name'] ?></p>
+                            <table class="details-more-table">
+                                            <thead>
+                                                <tr>
+                                                    <td style="font-weight:bolder">FROM</td>
+                                                    <td style="font-weight:bolder">TO</td>
+                                                    <td style="font-weight:bolder">DEPARTURE TIME</td>
+                                                    <td style="font-weight:bolder">ARRIVAL TIME</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php  foreach ($flights as $key =>$value) {
+                                                    echo '<tr>
+                                                    <td class="details-table-month">'.$value["from"].'</td>
+                                                    <td>
+                                                        <span>'.$value["to"].'</span>             
+                                                    </td>
+                                                    <td>
+                                                        <span>'.$value["depart_date"].'</span>
+                                                    </td>
+                                                    <td>'.$value["arrive_date"].'</td>
+                                                </tr>';
+                                                }
+                                                ?>
+
+                                            </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- ReviewAll -->
-    <div id="openreviewcomment">
-        <button class="close-button" onclick="closeReviewComment(), off()">×</button>
-        <h2>Comment All</h2>
-        <div class="details-review-comment">
-            <div style="width: 100%;text-align: right;">
-                <?php if (!empty($reviews)): ?>
-                    <?php foreach ($reviews as $review): ?>
-                        <div class="details-review-object">
-                            <span>
-                                <?php for ($i = 1; $i <= $review['rating']; $i++) {
-                                    echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
-                                } ?>
-                                <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
-                                <!-- btn remove and edit comment -->
-                                <!-- <button id="btn">...</button> -->
-                            </span>
-                            <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>No Comment!</p>
-                <?php endif; ?>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Review form container -->
-    <div class="review-form-container" id="reviewForm">
-        <button class="close-button" onclick="closeReviewForm(), off()">×</button>
-        <h2>Write a review / comment</h2>
-        <p>* Required fields</p>
-        <p>Rating (out of 5)*:</p>
-        <p>Just give a star rating or feel free to add a comment too...</p>
-        <?php ?>
-        <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach_id ?>" method="POST">
-            <!-- Star rating -->
-            <span class="star-rating" id="starRating">
-                <span class="star" data-value="1">★</span>
-                <span class="star" data-value="2">★</span>
-                <span class="star" data-value="3">★</span>
-                <span class="star" data-value="4">★</span>
-                <span class="star" data-value="5">★</span>
-            </span><br>
-            <input type="hidden" id="starValue" name="starValue">
-            <label for="name">Your name (optional):</label><br>
-            <input class="name-form-review" type="text" id="name" name="name"><br><br>
-            <label for="comments">Review comments (optional):</label>
-            <textarea class="comment-form-review" id="comments" name="comments"></textarea><br><br>
-            <button onclick="closeReviewForm(), off()" class="rating-form-btn-submit" type="submit">
-                Submit
-            </button>
-        </form>
-    </div>
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
