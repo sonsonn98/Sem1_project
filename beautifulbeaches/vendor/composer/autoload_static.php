@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af
+class ComposerStaticInitac2d307f4ed514763a8119f3523066bb
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -18,7 +18,6 @@ class ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af
         ),
         'F' => 
         array (
-            'Fpdf\\' => 5,
             'FontLib\\' => 8,
         ),
         'D' => 
@@ -40,10 +39,6 @@ class ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Fpdf\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fpdf/fpdf/src/Fpdf',
-        ),
         'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/php-font-lib/src/FontLib',
@@ -62,9 +57,9 @@ class ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita5f7f27f966a09b460f5f6d86877c6af::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitac2d307f4ed514763a8119f3523066bb::$classMap;
 
         }, null, ClassLoader::class);
     }

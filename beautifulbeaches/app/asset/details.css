@@ -340,10 +340,12 @@
 
 .details-review-comment {
     width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .details-review-object {
-    padding: 10px 0;
+    padding: 5px 10px;
 }
 
 .details-seeall-review {
@@ -351,11 +353,17 @@
     background-color: #fff;
     color: gray;
     text-decoration: underline;
-    padding: 5px 0;
-    font-size: 30px;
+    padding: 15px;
+    font-size: 25px;
     font-weight: bolder;
     text-align: right;
     cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.details-seeall-review:hover {
+    background-color: #faf9f7;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #openreviewcomment {
@@ -371,7 +379,7 @@
     width: 650px;
     max-height: 100%;
     z-index: 9999;
-}  
+}
 
 .rating-crossbar {
     border: 1px solid gray;
@@ -380,10 +388,35 @@
     width: 45%;
 }
 
-#crossbar-persent {
+#crossbar-percent {
     height: 100%;
     background-color: gray;
 }
+
+#details-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+#detailsDropdownBtn {
+    color: #000;
+    cursor: pointer;
+}
+
+#detailsDropdownContent {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#detailsDropdownContent a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
 
 /* responsive */
 @media (max-width: 1224px) {
@@ -391,6 +424,7 @@
         width: 100px;
         height: 100px;
     }
+
     .details-pluses-title {
         font-size: 15px;
     }
@@ -400,11 +434,13 @@
 
     .details-review-left {
         width: 100%;
-        
+
     }
+
     .details-review-container {
         display: block;
     }
+
     .details-review-right {
         width: 100%;
         margin-top: 10px;
@@ -415,6 +451,7 @@
         width: 400px;
         height: 200px;
     }
+
     .details-beach-about {
         width: 60%;
     }
@@ -423,19 +460,22 @@
         width: 80px;
         height: 80px;
     }
+
     .details-pluses-info {
         width: 65%;
     }
-    
+
 }
 
 @media(max-width: 940px) {
     .details-more {
         display: block;
     }
+
     .details-more-item {
         width: 100%;
     }
+
     .more-item-right {
         width: 100%;
         margin-top: 20px;
@@ -444,38 +484,47 @@
     .details-beach-body {
         display: block;
     }
+
     .details-beach-about {
         width: 100%;
     }
+
     .details-beach-img {
         margin-top: 20px;
         width: 100%;
         height: auto;
     }
+
     .details-pluses {
         display: block;
     }
+
     .details-pluses-item {
         width: 100%;
         margin-top: 10px;
         height: auto;
         justify-content: left;
     }
+
     .details-pluses-img {
         width: 100px;
         height: 100px;
     }
+
     .details-pluses-info {
         width: 70%;
         height: auto;
         margin-left: 10px;
     }
+
     .details-pluses-title {
         font-size: 20px;
     }
+
     .details-hotel-container {
         padding: 0 40px;
     }
+
     .details-quote-later span {
         left: 90px;
     }

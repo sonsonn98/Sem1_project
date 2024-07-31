@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <?php
+    $beach_id = $data['beach_id'];
+    $review_exists = isset($_SESSION["reviews"]["review_id"]) && $_SESSION["reviews"]["beach_id"] == $beach_id;
+    ?>
+    <script type="text/javascript">
+        function validateForm(event) {
+            <?php if ($review_exists): ?>
+                event.preventDefault();
+                alert('Each beach can only be commented once!');
+            <?php else: ?>
+                alert('Comment successfully!');
+            <?php endif; ?>
+        }
+        function delReviewSuccess() {
+            alert('Delete comment successfully!');
+        }
+    </script>
+</head>
+
 <body>
     <?php $beach = $data['beach'];
     $image = $data['image'][0];
@@ -10,7 +30,6 @@
     $traits = $data['traits'];
     $infos = $data['infos'];
     $weathers = $data['weathers'];
-    $beach_id = $data['beach_id'];
     $reviews = $data['reviews'];
     $totalReviews = $data['totalReviews'];
     $averageRating = $data['averageRating'];
@@ -19,6 +38,7 @@
     $persent3Star = $data['persent3Star'];
     $persent4Star = $data['persent4Star'];
     $persent5Star = $data['persent5Star'];
+    $review_id = $_SESSION["reviews"]["review_id"];
     ?>
     <div id="details-overlay" onclick="closeReviewForm(), closeReviewComment(), off()"></div>
     <div class="c-12 details-container-img">
@@ -159,7 +179,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent5Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $percent5Star ?>%;" id="crossbar-percent"></p>
                                         </div>
                                     </div>
                                     <div
@@ -171,7 +191,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent4Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $percent4Star ?>%;" id="crossbar-percent"></p>
                                         </div>
                                     </div>
                                     <div
@@ -182,7 +202,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent3Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $percent3Star ?>%;" id="crossbar-percent"></p>
                                         </div>
                                     </div>
                                     <div
@@ -192,7 +212,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent2Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $percent2Star ?>%;" id="crossbar-percent"></p>
                                         </div>
                                     </div>
                                     <div
@@ -201,7 +221,7 @@
                                             <i style="font-size: 10px;color: gray;" class="fa-solid fa-star"></i>
                                         </span>
                                         <div class="rating-crossbar">
-                                            <p style="width: <?= $persent1Star ?>%;" id="crossbar-persent"></p>
+                                            <p style="width: <?= $percent1Star ?>%;" id="crossbar-percent"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -218,20 +238,25 @@
                     <div class="details-review-right">
                         <button class="details-seeall-review" onclick="openReviewComment(), on()">See All</button>
                         <div class="details-review-comment">
-                            <div style="width: 100%;text-align: right;padding: 5px;">
+                            <div style="width: 100%;text-align:left;padding: 5px;">
                                 <?php if (!empty($reviews)): ?>
                                     <?php $item = array_slice($reviews, 0, 3) ?>
                                     <?php foreach ($item as $review): ?>
                                         <div class="details-review-object">
-                                            <span>
+                                            <p>
+                                                <?php if ($review['review_id'] == $_SESSION["reviews"]["review_id"]): ?>
+                                                    <span
+                                                        style="font-weight: bold;color: steelblue;"><?= $review['reviewer_name'] ?></span>
+                                                <?php else: ?>
+                                                    <span style="font-weight: bold;"><?= $review['reviewer_name'] ?></span>
+                                                <?php endif; ?>
+                                            </p>
+                                            <span style="margin-top: 5px;"><?= $review['review_comments'] ?></span>
+                                            <span style="margin-left: 5px;">
                                                 <?php for ($i = 1; $i <= $review['rating']; $i++) {
                                                     echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
                                                 } ?>
-                                                <span
-                                                    style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?>
-                                                </span>
                                             </span>
-                                            <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
                                         </div>
                                     <?php endforeach; ?>
                                 <?php else: ?>
@@ -250,19 +275,30 @@
         <button class="close-button" onclick="closeReviewComment(), off()">×</button>
         <h2>Comment All</h2>
         <div class="details-review-comment">
-            <div style="width: 100%;text-align: right;">
+            <div style="width: 100%;text-align: left;">
                 <?php if (!empty($reviews)): ?>
                     <?php foreach ($reviews as $review): ?>
                         <div class="details-review-object">
                             <span>
+                                <?php if ($review['review_id'] == $_SESSION["reviews"]["review_id"]): ?>
+                                    <span style="font-weight: bold;color: steelblue;"><?= $review['reviewer_name'] ?></span>
+                                    <span>
+                                        <a onclick="delReviewSuccess()"
+                                            href="http://localhost/beautifulbeaches/details/deleleReview/<?= $review_id ?>/<?= $beach_id ?>">
+                                            <i class="fa-solid fa-trash" style="color: red;font-size: 12.5px;"></i>
+                                        </a>
+                                    </span>
+                                    <br>
+                                <?php else: ?>
+                                    <p style="font-weight: bold;"><?= $review['reviewer_name'] ?></p>
+                                <?php endif; ?>
+                            </span>
+                            <span style="margin-top: 5px;"><?= $review['review_comments'] ?></span>
+                            <span style="margin-left: 5px;">
                                 <?php for ($i = 1; $i <= $review['rating']; $i++) {
                                     echo "<i style='font-size: 10px;color: orange;' class='fa-solid fa-star'></i>";
                                 } ?>
-                                <span style="margin-left: 5px;font-weight: bold;"><?= $review['reviewer_name'] ?></span>
-                                <!-- btn remove and edit comment -->
-                                <!-- <button id="btn">...</button> -->
                             </span>
-                            <p style="margin-top: 5px;"><?= $review['review_comments'] ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
@@ -270,16 +306,19 @@
                 <?php endif; ?>
             </div>
         </div>
+
     </div>
 
+    <!-- Review form container -->
     <div class="review-form-container" id="reviewForm">
         <button class="close-button" onclick="closeReviewForm(), off()">×</button>
         <h2>Write a review / comment</h2>
         <p>* Required fields</p>
         <p>Rating (out of 5)*:</p>
         <p>Just give a star rating or feel free to add a comment too...</p>
-        <?php ?>
-        <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach_id ?>" method="POST">
+        <form action="http://localhost/beautifulbeaches/details/saveReviews/<?= $beach_id ?>" method="POST"
+            onsubmit="validateForm(event)">
+            <!-- Star rating -->
             <span class="star-rating" id="starRating">
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
