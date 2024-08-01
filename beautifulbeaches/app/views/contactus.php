@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body class="contact-body">
-    <div class="container">
+    <div class="contact-container">
         <div class="row">
             <div class="col-md-8">
                 <div class="social-network">
@@ -15,19 +15,18 @@
                         <li class="social-network-item"><a href="https://www.instagram.com/"><img src="https://worlds50beaches.com/assets/images/inst.svg" alt="IG"></a></li>
                     </ul>
                 </div>
-                <p>Viết nội dung ở đây </p>
                 <form method="POST" action="http://localhost/beautifulbeaches/contactus/savecontact" class="contact-form">
                     <div class="form-group">
                         <label for="name" class="contact-label">Name *</label>
-                        <input class="border3" type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input class="border3" type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="contact-label">Email *</label>
-                        <input class="border3" type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input class="border3" type="email" id="email" name="email"  required>
                     </div>
                     <div class="form-group">
                         <label for="message" class="contact-label">Message *</label>
-                        <textarea class="border3" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <textarea class="border3" id="message" name="message" rows="5"  required></textarea>
                     </div>
                     <button type="submit" class="contact-btn">Submit</button>
                 </form>
@@ -35,12 +34,21 @@
             <div class="col-md-4">
                 <div class="map">
                     <h4 class="map-title">Our Map</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096949073242!2d105.77971427471442!3d21.02880648777807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1720507570689!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096949073242!2d105.77971427471442!3d21.02880648777807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1720507570689!5m2!1svi!2s" 
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="contact-information">
                     <h4 class="contact-info-title">CONTACT INFORMATION</h4>
-                    <p class="contact-background"><strong>HaNoi,</strong> 8A Ton That Thuyet, My Dinh<br>Call: 0869171498<br>Email: hndcmm245@gmail.com</p>
-                    <p class="contact-background"><strong>Ho Chi Minh city,</strong> Quan 1 <br>Call: 0910jqkA<br>Email: saigonno1@gmail.com</p>
+                    <div class="contact-background">
+                        <p style="margin:0;"><span style="font-weight:bold;">HaNoi,</span>8A Ton That Thuyet, My Dinh</p>
+                        <p style="margin:0;">Call: 0869171498</p>
+                        <p style="margin:0;">Email: hndcmm245@gmail.com</p>
+                    </div>
+                    <div class="contact-background">
+                        <p style="margin:0;"><span style="font-weight:bold;">HaNoi,</span>8A Ton That Thuyet, My Dinh</p>
+                        <p style="margin:0;">Call: 0869171498</p>
+                        <p style="margin:0;">Email: hndcmm245@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>

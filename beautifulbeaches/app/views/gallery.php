@@ -4,7 +4,7 @@
             $i = array_slice($imgs, 0 , 40);    
     ?>
 <body>
-    <div class="gallery-container">
+    <div class="gallery-1">
         <p>GALLERY</p>
     <div class="image-grid">
         <?php foreach($i as $img): ?>
