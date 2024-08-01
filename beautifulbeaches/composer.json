@@ -1,5 +1,9 @@
 {
     "require": {
+<<<<<<< HEAD
         "fpdf/fpdf": "^1.86"
+=======
+        "dompdf/dompdf": "^3.0"
+>>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
     }
 }

@@ -8,6 +8,35 @@ class ToplistController extends BaseController {
         $this->__homeModel = $this->initModel("HomeModel", $conn);
     }
 
+    private function createPagination($totalPages, $currentPage) {
+        $pagination = [];
+    
+        if ($totalPages <= 5) {
+            for ($i = 1; $i <= $totalPages; $i++) {
+                $pagination[] = $i;
+            }
+        } else {
+            $pagination[] = 1;
+            if ($currentPage > 3) {
+                $pagination[] = '...';
+            }
+            $start = max(2, $currentPage - 1);
+            $end = min($totalPages - 1, $currentPage + 1);
+    
+            for ($i = $start; $i <= $end; $i++) {
+                $pagination[] = $i;
+            }
+    
+            if ($currentPage < $totalPages - 2) {
+                $pagination[] = '...';
+            }
+            $pagination[] = $totalPages;
+        }
+    
+        return $pagination;
+    }
+    
+
     public function index() {
         $zones = $this->__homeModel->getAllZones();
         if (isset($_GET['id'])) {
@@ -24,6 +53,8 @@ class ToplistController extends BaseController {
             $totalBeaches = $this->__toplistModel->countBeachesByZoneId($zone_id, $search);
             $totalPages = ceil($totalBeaches / $limit);
 
+            $pagination = $this->createPagination($totalPages, $page);
+
             if ($zone) {
                 $this->view("layout2", [
                     "content" => "toplist",
@@ -32,10 +63,12 @@ class ToplistController extends BaseController {
                     "beaches" => $beaches,
                     "currentPage" => $page,
                     "totalPages" => $totalPages,
+                    "pagination" => $pagination,
                     "search" => $search
                 ]);
             }
         }
     }
 }
+
 ?>

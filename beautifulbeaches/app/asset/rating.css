@@ -1,20 +1,26 @@
 /* Style for the button */
-button.review-button {
-    margin-top: 20px;
+.review-button {
     background-color: #faf9f7;
+    padding: 15px;
     color: gray;
     font-size: 17px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     text-decoration: underline;
+    transition: all ease-in-out 0.2s;
+}
+
+.review-button:hover {
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Style for the form */
 div.review-form-container {
     display: none;
     position: fixed;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -22,7 +28,7 @@ div.review-form-container {
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 560px;
-    height: 600px;
+    height: 100%;
     z-index: 9999;
 }
 
@@ -30,14 +36,26 @@ div.review-form-container h2 {
     margin-top: 0;
 }
 
-button.close-button {
+.close-button {
+    width: 15px;
+    height: 15px;
+    padding: 15px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.2s;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 70, 70, 0.765);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Star rating styles */
