@@ -71,7 +71,7 @@
               <div class="ad-title">FEATURED VIDEO</div>
               <div class="ad-media">
                 <div class="ad-thumbnail">
-                <iframe width="470" height="250" src="https://www.youtube.com/embed/0ZBqnOeIxbQ?si=P9oFAgoC99nAuI-p&amp;start=296" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/0ZBqnOeIxbQ?si=P9oFAgoC99nAuI-p&amp;start=296" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="ad-content">
                   <p>Whitehaven Beach - Whitsunday Islands - Australia</p>

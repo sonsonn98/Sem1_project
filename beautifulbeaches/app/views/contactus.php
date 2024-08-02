@@ -2,7 +2,7 @@
 <html lang="en">
 <body class="contact-body">
     <div class="contact-container">
-        <div class="row">
+        <div class="row-gallery">
             <div class="col-md-8">
                 <div class="social-network">
                     <h4 class="social-network-title">BE THE FIRST TO HEAR ABOUT OUR NEW LISTS</h4>

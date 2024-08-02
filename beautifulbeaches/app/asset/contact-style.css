@@ -1,219 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-container {
-    width: 100%;
-    margin-top: 230px;
-    padding: 0 100px;
+  width: 100%;
+  margin-top: 230px;
+  padding: 0 100px;
 
-    position: relative;
+  position: relative;
 }
 
-.row {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px; 
+.row-gallery {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  gap: 20px;
 }
-
-
 
 .col-md-8 {
-    
-    width: 40%;
+  width: 40%;
 }
 
 .col-md-4 {
-    width: 40%;
+  width: 40%;
 }
 
 .social-network {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .social-network-title {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .social-network-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social-network-item {
-    display: inline-block;
-    margin-right: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-network-item img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-network-item:hover img {
-    transform: scale(1.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form {
-    margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 20px;
-    background-color: #ffffff;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 20px;
+  background-color: #ffffff;
 }
 
 .contact-form .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .contact-form .contact-label {
-    display: block;
-    font-weight: normal;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #000;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #000;
 }
 
 .contact-form .contact-input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #000;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
-    font-size: 16px;
-    color: #555; 
-    padding: 10px 5px;
-    background-color: transparent; 
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 16px;
+  color: #555;
+  padding: 10px 5px;
+  background-color: transparent;
 }
 
 .contact-form .contact-input::placeholder {
-    color: #fff9f9; 
+  color: #fff9f9;
 }
 
 .contact-form .contact-input:focus {
-    box-shadow: none;
-    border-color: #000;
+  box-shadow: none;
+  border-color: #000;
 }
 
 .border3 {
-    outline: none;
-    font-size: 25px;
-    border: none;
-    width: 100%;
-    max-width: 600px;
-    height: 50px;
-    border-bottom: 1px solid;
+  outline: none;
+  font-size: 25px;
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  border-bottom: 1px solid;
 }
 
 .contact-form .contact-btn {
-    background-color: #ffffff;
-    border: 1px solid #908f8f; 
-    border-radius: 2px; 
-    padding: 10px 20px;
-    text-transform: uppercase;
-    color: #767676;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff;
+  border: 1px solid #908f8f;
+  border-radius: 2px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #767676;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-form .contact-btn:hover {
-    background-color: #000; 
-    color: #fff;  
+  background-color: #000;
+  color: #fff;
 }
 
 .map {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .map-title {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .contact-info-title {
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgb(125, 124, 124);
-    margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(125, 124, 124);
+  margin-bottom: 10px;
 }
 
 .contact-information p {
-    margin-bottom: 20px;
-    padding-right: 100px;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
-    display: flex; 
-    flex-wrap: wrap; 
+  margin-bottom: 20px;
+  padding-right: 100px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
 #bannerad {
-    position: fixed;
-    top: 200px;
-    right: 0;
-    width: 305px;
-    height: 440px;
-    z-index: 1000; 
+  position: fixed;
+  top: 200px;
+  right: 0;
+  width: 305px;
+  height: 440px;
+  z-index: 1000;
 }
 
 #bannerad img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contact-background {
-    margin-top: 10px;
-}
-@media (max-width: 1800px) {
-    .row {
-        display: block;
-    }
+  margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
+@media (max-width: 1000px) {
+  .col-md-8,
+  .col-md-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 
-    .col-md-8, .col-md-4 {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
+  .col-md-8 {
+    margin-bottom: 20px;
+  }
 
-    .col-md-8 {
-        margin-bottom: 20px;
-    }
-
-    .contact-information p {
-        padding-right: 20px; 
-    }
+  .contact-information p {
+    padding-right: 20px;
+  }
 }
 
-@media (max-width: 480px) {
-    .contact-information p {
-        padding-right: 10px;
-    }
+@media (max-width: 740px) {
+  .contact-container {
+    padding: 0;
+  }
+  .contact-information p {
+    padding-right: 10px;
+  }
 
-    .banner-ad {
-        position: static;
-        width: 100%;
-        height: auto;
-    }
+  .banner-ad {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
 
-    .banner-ad img {
-        width: 100%;
-        height: auto;
-    }
+  .banner-ad img {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -14,10 +14,6 @@ footer {
     flex: 1 1 auto;
 }
 
-.footer-info {
-    gap: 120px;
-}
-
 .footer-title {
     font-size: 13.333px;
     color: #000;
@@ -131,4 +127,11 @@ footer {
 .footer-copy {
     font-size: 10px;
     color: black;
+}
+
+@media (max-width: 740px) {
+    .footer-form {
+        gap: 0px;
+    }
+    
 }

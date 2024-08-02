@@ -11,22 +11,6 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/coreydoughty/Fpdf/zipball/d2a0cbd9e4b5557b9c6c29ddc8eb2b36d8761e00",
-                "reference": "d2a0cbd9e4b5557b9c6c29ddc8eb2b36d8761e00",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "time": "2023-07-04T16:41:45+00:00",
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "FPDF": "Fpdf\\Fpdf"
-                    }
-=======
                 "url": "https://api.github.com/repos/dompdf/dompdf/zipball/fbc7c5ee5d94f7a910b78b43feb7931b7f971b59",
                 "reference": "fbc7c5ee5d94f7a910b78b43feb7931b7f971b59",
                 "shasum": ""
@@ -207,17 +191,12 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.7-dev"
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
                 }
             },
             "installation-source": "source",
             "autoload": {
                 "psr-4": {
-<<<<<<< HEAD
-                    "Fpdf\\": "src/Fpdf"
-=======
                     "Masterminds\\": "src"
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -226,24 +205,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "Corey Doughty",
-                    "email": "corey@doughty.ca"
-                }
-            ],
-            "description": "FPDF Composer Wrapper",
-            "homepage": "https://github.com/coreydoughty/Fpdf",
-            "keywords": [
-                "fpdf",
-                "pdf",
-                "wrapper"
-            ],
-            "support": {
-                "issues": "https://github.com/coreydoughty/Fpdf/issues",
-                "source": "https://github.com/coreydoughty/Fpdf/tree/1.86.0"
-            },
-            "install-path": "../fpdf/fpdf"
-=======
                     "name": "Matt Butcher",
                     "email": "technosophos@gmail.com"
                 },
@@ -340,7 +301,6 @@
                 "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.6.0"
             },
             "install-path": "../sabberworm/php-css-parser"
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
         }
     ],
     "dev": true,

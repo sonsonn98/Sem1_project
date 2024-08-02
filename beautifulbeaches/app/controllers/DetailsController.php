@@ -3,19 +3,16 @@
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-class DetailsController extends BaseController
-{
+class DetailsController extends BaseController {
     private $__detailsModel;
     private $__homeModel;
 
-    function __construct($conn)
-    {
+    function __construct($conn) {
         $this->__detailsModel = $this->initModel("DetailsModel", $conn);
         $this->__homeModel = $this->initModel("HomeModel", $conn);
     }
 
-    public function index()
-    {
+    public function index() {
         if (isset($_GET['id'])) {
             $beach_id = intval($_GET['id']);
             $zones = $this->__homeModel->getAllZones();
@@ -28,7 +25,7 @@ class DetailsController extends BaseController
             $infos = $this->__detailsModel->getMoreInfoByIds($beach['id']);
             $weathers = $this->__detailsModel->getBeachWeather($beach['id']);
             $reviews = $this->__detailsModel->getAllReviews($beach_id);
-
+            
             $totalReviews = 0;
             $averageRating = 0;
             $persent1Star = 0;
@@ -94,28 +91,17 @@ class DetailsController extends BaseController
         }
     }
 
-    public function saveReviews($beach_id)
-    {
+    public function saveReviews($beach_id) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $starValue = $_POST["starValue"];
             $name = empty($_POST["name"]) ? "Anonymous" : $_POST["name"];
             $comments = empty($_POST["comments"]) ? "" : $_POST["comments"];
-            if (!isset($_SESSION["reviews"]["review_id"]) || $beach_id != $_SESSION["reviews"]["beach_id"]) {
-                $this->__detailsModel->saveReviews($starValue, $beach_id, $name, $comments);
-            }
+            $this->__detailsModel->saveReviews($starValue, $beach_id, $name, $comments);
             header("location: http://localhost/beautifulbeaches/details/index?id=$beach_id");
-
         }
     }
 
-    public function deleleReview($review_id, $beach_id)
-    {
-        $this->__detailsModel->deleteReviewById($review_id);
-        header("location: http://localhost/beautifulbeaches/details/index?id=$beach_id");
-    }
-
-    public function downloadPDF($id = null)
-    {
+    public function downloadPDF($id = null) {
         if ($id === null && isset($_GET['id'])) {
             $id = intval($_GET['id']);
         }
@@ -124,21 +110,21 @@ class DetailsController extends BaseController
         $traits = $this->__detailsModel->getTraitsByIds($beach_id);
         $infos = $this->__detailsModel->getMoreInfoByIds($beach_id);
         $weathers = $this->__detailsModel->getBeachWeather($beach_id);
-
+    
         ob_start();
         include __DIR__ . '/../views/pdf_template.php';
         $html = ob_get_clean();
-
+    
         $options = new Options();
         $options->set('isHtml5ParserEnabled', true);
         $options->set('isRemoteEnabled', true);
-
+    
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
         $dompdf->stream('beach_details.pdf', ['Attachment' => true]);
     }
-
+    
 }
 ?>

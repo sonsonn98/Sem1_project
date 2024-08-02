@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "97a5a1165e7e612c4b9584c399e97892",
-=======
     "content-hash": "13c2ea380f6f598f89b9cfcbd5fd6457",
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
     "packages": [
         {
             "name": "dompdf/dompdf",
@@ -203,24 +199,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "Corey Doughty",
-                    "email": "corey@doughty.ca"
-                }
-            ],
-            "description": "FPDF Composer Wrapper",
-            "homepage": "https://github.com/coreydoughty/Fpdf",
-            "keywords": [
-                "fpdf",
-                "pdf",
-                "wrapper"
-            ],
-            "support": {
-                "issues": "https://github.com/coreydoughty/Fpdf/issues",
-                "source": "https://github.com/coreydoughty/Fpdf/tree/1.86.0"
-            },
-            "time": "2023-07-04T16:41:45+00:00"
-=======
                     "name": "Matt Butcher",
                     "email": "technosophos@gmail.com"
                 },
@@ -314,7 +292,6 @@
                 "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.6.0"
             },
             "time": "2024-07-01T07:33:21+00:00"
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
         }
     ],
     "packages-dev": [],

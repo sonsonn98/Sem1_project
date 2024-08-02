@@ -3,11 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-<<<<<<< HEAD
-        'reference' => '1ba0a54fdf7880ece16ad9e151363af90972974f',
-=======
-        'reference' => '23ba5c4213ee1e218d43bd4b36b321dbe2e8a2aa',
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
+        'reference' => '426223d56e1157832963467d904581c872332482',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -17,11 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-<<<<<<< HEAD
-            'reference' => '1ba0a54fdf7880ece16ad9e151363af90972974f',
-=======
-            'reference' => '23ba5c4213ee1e218d43bd4b36b321dbe2e8a2aa',
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
+            'reference' => '426223d56e1157832963467d904581c872332482',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -36,8 +28,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-<<<<<<< HEAD
-=======
         'dompdf/php-font-lib' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -74,6 +64,5 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
->>>>>>> 36f4f1bab95ae3fd9e834cc7f981898584c7ed02
     ),
 );

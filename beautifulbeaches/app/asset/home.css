@@ -16,8 +16,8 @@ body {
 }
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 section {
@@ -161,8 +161,14 @@ section {
   letter-spacing: 3px;
   margin-bottom: 20px;
 }
+.ad-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .ad-content {
+  margin-top: 10px;
   display: flex;
   padding: 10px;
   justify-content: center;

@@ -164,11 +164,14 @@ header {
 
 @media (max-width: 740px) {
   header {
-    border-bottom: none;
     display: block;
+    height: 100px;
   }
   .menu {
       display: none;
+  }
+  .main-content {
+    margin-top: 0;
   }
 
   .subhome {
